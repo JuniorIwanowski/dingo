@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout android:layout_width="fill_parent"
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bgcasa">
+	<Button android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_x="36dp" android:text="" android:layout_y="116dp"
+		android:background="@drawable/icon" android:id="@+id/BTChamaMicroondas"></Button>
+	<Button android:background="@drawable/icon"
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:layout_x="181dp" android:layout_y="117dp" android:id="@+id/BTChamaGeladeira"></Button>
+	<Button android:background="@drawable/icon"
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:layout_x="35dp" android:layout_y="242dp" android:id="@+id/BTChamaBatedeira"></Button>
+	<Button android:background="@drawable/icon"
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:layout_x="187dp" android:layout_y="242dp" android:id="@+id/BTChamaLampCozinha"></Button>
+	<Button android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_x="130dp" android:text="Voltar" android:layout_y="409dp" android:id="@+id/BTCozinhaVoltar"></Button>
+	<TextView android:textColor="#000000" android:text="AparelhosCozinha" android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_x="66dp" android:layout_y="16dp"></TextView>
+	<TextView android:textColor="#000000" android:text="Microondas" android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_x="16dp" android:layout_y="91dp"></TextView>
+	<TextView android:textColor="#000000" android:text="Geladeira" android:layout_height="wrap_content" android:id="@+id/TextView01" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_x="170dp" android:layout_y="94dp"></TextView>
+	<TextView android:textColor="#000000" android:text="Batedeira" android:layout_height="wrap_content" android:id="@+id/TextView02" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_x="25dp" android:layout_y="218dp"></TextView>
+	<TextView android:textColor="#000000" android:text="Lâmpada" android:layout_height="wrap_content" android:id="@+id/TextView03" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_x="178dp" android:layout_y="216dp"></TextView>
+</AbsoluteLayout>

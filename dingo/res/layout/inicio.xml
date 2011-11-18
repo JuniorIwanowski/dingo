@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:background="@drawable/bgcasa"
+  android:layout_height="fill_parent" android:weightSum="1">
+    <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:orientation="vertical" >
+        <TableRow android:id="@+id/tableRow1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:gravity="center">
+            <TextView android:layout_height="wrap_content" android:text="Selecionar cômodo" android:id="@+id/textView1" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+        </TableRow>
+        <ListView android:id="@+id/listComodos" android:layout_width="fill_parent" android:layout_height="321dp">
+            <!-- Preview: listitem=@android:layout/simple_list_item_1 -->
+        </ListView>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayout2" android:layout_width="fill_parent" android:orientation="vertical" android:layout_height="fill_parent" android:gravity="center|bottom">
+
+        <Button android:id="@+id/btCalcular" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cálculo de gastos" />
+
+        <Button android:id="@+id/btVoltar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Voltar"></Button>
+    </LinearLayout>
+    
+</LinearLayout>

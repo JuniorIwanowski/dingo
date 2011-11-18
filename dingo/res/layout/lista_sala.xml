@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout android:layout_width="fill_parent"
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bgcasa">
+	<Button android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_x="36dp" android:text="" android:layout_y="116dp"
+		android:background="@drawable/icon" android:id="@+id/BTChamaTVSala"></Button>
+	<Button android:background="@drawable/icon"
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:layout_x="181dp" android:layout_y="117dp" android:id="@+id/BTChamaDVD"></Button>
+	<Button android:background="@drawable/icon"
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:layout_x="35dp" android:layout_y="242dp" android:id="@+id/BTChamaSom"></Button>
+	<Button android:background="@drawable/icon"
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:layout_x="187dp" android:layout_y="242dp" android:id="@+id/BTChamaLampSala"></Button>
+	<TextView android:textColor="#000000" android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content" android:id="@+id/textView2"
+		android:text="TV" android:layout_x="51dp" android:layout_y="92dp"></TextView>
+	<TextView android:textColor="#000000" android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content" android:id="@+id/TextView01"
+		android:text="DVD" android:layout_x="186dp" android:layout_y="94dp"></TextView>
+	<TextView android:textColor="#000000" android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content" android:id="@+id/TextView02"
+		android:text="Som" android:layout_x="41dp" android:layout_y="214dp"></TextView>
+	<TextView  android:textColor="#000000" android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content" android:id="@+id/TextView03"
+		android:text="Lâmpada" android:layout_x="174dp" android:layout_y="213dp"></TextView>
+	<Button android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_x="130dp" android:text="Voltar" android:layout_y="409dp" android:id="@+id/BTSalaVoltar"></Button>
+	<TextView android:textColor="#000000" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:id="@+id/textView1" android:text="AparelhosSala" android:layout_x="90dp" android:layout_y="17dp"></TextView>
+</AbsoluteLayout>
