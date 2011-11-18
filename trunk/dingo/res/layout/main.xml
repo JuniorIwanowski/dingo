@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout android:layout_width="fill_parent"
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bglogo">
+    <Button android:layout_height="wrap_content" android:layout_x="125dp" android:text="Ajuda" android:layout_y="388dp" android:layout_width="71dp" android:id="@+id/btAjuda"></Button>
+    <Button android:layout_height="wrap_content" android:layout_width="206dp" android:text="Inciar Simulação" android:layout_x="63dp" android:layout_y="48dp" android:id="@+id/btInicio"></Button>
+	
+	</AbsoluteLayout>

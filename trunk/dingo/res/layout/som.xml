@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout android:layout_width="fill_parent"
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bgsom2">
+	<TextView   android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Tempo de uso:" android:layout_width="wrap_content" android:layout_x="12dp" android:layout_y="70dp"></TextView>
+	<EditText android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITSomTempo"></EditText>
+	<EditText android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="129dp" android:id="@+id/EDITSomPotencia">
+		
+	</EditText>
+	<EditText android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="207dp" android:id="@+id/EDITSomQuant"></EditText>
+	<TextView  android:textColor="#000000" android:id="@+id/textView3" android:layout_height="wrap_content" android:text="Quantidade:" android:layout_width="wrap_content" android:layout_x="11dp" android:layout_y="222dp"></TextView>
+	<TextView  android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Potência:" android:layout_width="wrap_content" android:layout_x="18dp" android:layout_y="145dp"></TextView>
+	<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Voltar" android:layout_x="140dp" android:layout_y="431dp" android:id="@+id/BTSomVoltar"></Button>
+	<TextView android:id="@+id/textView2" android:textColor="#000000" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Som" android:layout_width="wrap_content" android:layout_x="138dp" android:layout_y="6dp"></TextView>
+</AbsoluteLayout>
