@@ -215,35 +215,47 @@ public class Dingo extends Activity {
 
 	public void CarregaTelaInicio() {
 		setContentView(R.layout.inicio);
+		
+		Button BTChamaSala = (Button) findViewById(R.id.BTChamaSala);
+		BTChamaSala.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				CarregaTelaSala();
 
-		Button btVoltar = (Button) findViewById(R.id.btVoltar);
+			}
+		});
+		
+		Button BTChamaQuarto = (Button) findViewById(R.id.BTChamaQuarto);
+		BTChamaQuarto.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				CarregaTelaQuarto();
+
+			}
+		});
+		
+		Button BTChamaCozinha = (Button) findViewById(R.id.BTChamaCozinha);
+		BTChamaCozinha.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				CarregaTelaCozinha();
+
+			}
+		});
+		
+		Button BTChamaBanheiro = (Button) findViewById(R.id.BTChamaBanheiro);
+		BTChamaBanheiro.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				CarregaTelaBanheiro();
+
+			}
+		});
+
+		Button btVoltar = (Button) findViewById(R.id.BTVoltar);
 		btVoltar.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaPrincipal();
 			}
 		});
 
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1, comodos);
-		lista = (ListView) findViewById(R.id.listComodos);
-		lista.setAdapter(adapter);
-
-		lista.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				if (position == 0) {
-					CarregaTelaSala();
-				} else if (position == 1) {
-					CarregaTelaQuarto();
-				} else if (position == 2) {
-					CarregaTelaCozinha();
-				} else if (position == 3) {
-					CarregaTelaBanheiro();
-				}
-			}
-		});
-
-		Button btcalcular = (Button) findViewById(R.id.btCalcular);
+		Button btcalcular = (Button) findViewById(R.id.BTCalcular);
 		btcalcular.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 
@@ -1374,9 +1386,6 @@ public class Dingo extends Activity {
 		super.onCreate(savedInstanceState);
 		CarregaTelaPrincipal();
 	}
-
-	static final String[] comodos = new String[] { "Sala", "Quarto", "Cozinha",
-			"Banheiro" };
 
 	private static String getValorFormatado(Float f) {
 		Locale.setDefault(new Locale("pt", "BR"));

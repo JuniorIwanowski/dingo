@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<AbsoluteLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
   android:layout_width="fill_parent"
   android:background="@drawable/bgcasa"
   android:layout_height="fill_parent" android:weightSum="1">
-    <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:orientation="vertical" >
-        <TableRow android:id="@+id/tableRow1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:gravity="center">
-            <TextView android:layout_height="wrap_content" android:text="Selecionar cômodo" android:id="@+id/textView1" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
-        </TableRow>
-        <ListView android:id="@+id/listComodos" android:layout_width="fill_parent" android:layout_height="321dp">
-            <!-- Preview: listitem=@android:layout/simple_list_item_1 -->
-        </ListView>
-    </LinearLayout>
-    <LinearLayout android:id="@+id/linearLayout2" android:layout_width="fill_parent" android:orientation="vertical" android:layout_height="fill_parent" android:gravity="center|bottom">
-
-        <Button android:id="@+id/btCalcular" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cálculo de gastos" />
-
-        <Button android:id="@+id/btVoltar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Voltar"></Button>
-    </LinearLayout>
+    <Button android:id="@+id/BTChamaSala" android:layout_height="55dp" android:text="Sala" android:layout_width="211dp" android:layout_x="54dp" android:layout_y="96dp"></Button>
+    <Button android:id="@+id/BTChamaQuarto" android:layout_height="55dp" android:text="Quarto" android:layout_width="211dp" android:layout_x="54dp" android:layout_y="162dp"></Button>
+    <Button android:id="@+id/BTChamaCozinha" android:layout_height="55dp" android:text="Cozinha" android:layout_width="211dp" android:layout_x="54dp" android:layout_y="223dp"></Button>
+    <Button android:id="@+id/BTChamaBanheiro" android:layout_height="55dp" android:text="Banheiro" android:layout_width="211dp" android:layout_x="54dp" android:layout_y="285dp"></Button>
+    <Button android:id="@+id/BTVoltar" android:layout_height="wrap_content" android:text="Voltar" android:layout_width="75dp" android:layout_x="131dp" android:layout_y="418dp"></Button>
+    <Button android:id="@+id/BTCalcular" android:layout_height="wrap_content" android:text="Cálculos" android:layout_width="110dp" android:layout_x="110dp" android:layout_y="361dp"></Button>
+    <TextView android:text="Selecionar Cômodo" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/textView1" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="65dp" android:layout_y="28dp"></TextView>
     
-</LinearLayout>
+    
+</AbsoluteLayout>
