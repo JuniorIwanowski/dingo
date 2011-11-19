@@ -1281,11 +1281,29 @@ public class Dingo extends Activity {
 	
 	public void CarregaTelaAjuda() {
 		setContentView(R.layout.ajuda);
+		
+		Button btsobre = (Button) findViewById(R.id.BTSobre);
+		btsobre.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				CarregaTelaSobre();
+			}
+		});
 
 		Button btmainA = (Button) findViewById(R.id.BTAjudaVoltar);
 		btmainA.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaPrincipal();
+			}
+		});
+	}
+	
+	public void CarregaTelaSobre() {
+		setContentView(R.layout.sobre);
+		
+		Button btSobreVoltar = (Button) findViewById(R.id.BTSobreVoltar);
+		btSobreVoltar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				CarregaTelaAjuda();
 			}
 		});
 	}
