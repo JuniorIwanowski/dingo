@@ -4,11 +4,11 @@
 	<TextView android:textColor="#000000" android:id="@+id/textView2" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Lâmpada" android:layout_width="wrap_content" android:layout_x="108dp" android:layout_y="8dp"></TextView>
 	<TextView android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Tempo de uso:" android:layout_width="wrap_content" android:layout_x="12dp" android:layout_y="70dp"></TextView>
 	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITLampadaBanheiroTempo"></EditText>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="129dp" android:id="@+id/EDITLampadaBanheiroPotencia">
+	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/EDITLampadaBanheiroPotencia" android:layout_width="181dp" android:layout_x="110dp" android:layout_y="109dp">
 		
 	</EditText>
-	<EditText android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="207dp" android:id="@+id/EDITLampadaBanheiroQuant"></EditText>
-	<TextView android:textColor="#000000" android:id="@+id/textView3" android:layout_height="wrap_content" android:text="Quantidade:" android:layout_width="wrap_content" android:layout_x="11dp" android:layout_y="222dp"></TextView>
-	<TextView android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Potência:" android:layout_width="wrap_content" android:layout_x="18dp" android:layout_y="145dp"></TextView>
-	<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Voltar" android:layout_x="141dp" android:layout_y="436dp" android:id="@+id/BTLampadaBanheiroVoltar"></Button>
+	<EditText android:layout_height="wrap_content" android:id="@+id/EDITLampadaBanheiroQuant" android:layout_width="181dp" android:layout_x="109dp" android:layout_y="161dp"></EditText>
+	<TextView android:text="Potência:" android:layout_height="wrap_content" android:id="@+id/textView1" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="17dp" android:layout_y="120dp"></TextView>
+	<TextView android:text="Quantidade:" android:layout_height="wrap_content" android:id="@+id/textView3" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="14dp" android:layout_y="170dp"></TextView>
+	<Button android:id="@+id/BTLampadaBanheiroVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_x="248dp" android:layout_y="321dp"></Button>
 </AbsoluteLayout>

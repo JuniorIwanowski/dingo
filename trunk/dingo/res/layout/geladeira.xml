@@ -3,12 +3,12 @@
 	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bggeladeira">
 	<TextView android:textColor="#000000" android:id="@+id/textView2" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Geladeira" android:layout_width="wrap_content" android:layout_x="108dp" android:layout_y="8dp"></TextView>
 	<TextView android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Tempo de uso:" android:layout_width="wrap_content" android:layout_x="12dp" android:layout_y="70dp"></TextView>
-	<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Voltar" android:layout_x="124dp" android:layout_y="430dp" android:id="@+id/BTGeladeiraVoltar"></Button>
 	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITGeladeiraTempo"></EditText>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="129dp" android:id="@+id/EDITGeladeiraPotencia">
-	
+	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/EDITGeladeiraPotencia" android:layout_width="181dp" android:layout_x="110dp" android:layout_y="109dp"></EditText>
+	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/EDITGeladeiraQuant" android:layout_width="181dp" android:layout_x="110dp" android:layout_y="165dp">
+		<requestFocus></requestFocus>
 	</EditText>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="207dp" android:id="@+id/EDITGeladeiraQuant"></EditText>
-	<TextView android:textColor="#000000" android:id="@+id/textView3" android:layout_height="wrap_content" android:text="Quantidade:" android:layout_width="wrap_content" android:layout_x="11dp" android:layout_y="222dp"></TextView>
-	<TextView android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Potência:" android:layout_width="wrap_content" android:layout_x="18dp" android:layout_y="145dp"></TextView>
+	<TextView android:text="Potência:" android:layout_height="wrap_content" android:id="@+id/textView1" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="18dp" android:layout_y="122dp"></TextView>
+	<TextView android:text="Quantidade:" android:layout_height="wrap_content" android:id="@+id/textView3" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="18dp" android:layout_y="178dp"></TextView>
+	<Button android:id="@+id/BTGeladeiraVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_x="249dp" android:layout_y="318dp"></Button>
 </AbsoluteLayout>

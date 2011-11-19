@@ -4,11 +4,11 @@
 	<TextView  android:textColor="#000000" android:id="@+id/textView2" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Televisão" android:layout_width="wrap_content" android:layout_x="108dp" android:layout_y="8dp"></TextView>
 	<TextView   android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Tempo de uso:" android:layout_width="wrap_content" android:layout_x="12dp" android:layout_y="70dp"></TextView>
 	<EditText  android:inputType="number"  android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITTVQuartoTempo"></EditText>
-	<EditText  android:inputType="number" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="129dp" android:id="@+id/EDITTVQuartoPotencia">
-		
+	<Button android:id="@+id/BTTVQuartoVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_x="257dp" android:layout_y="326dp"></Button>
+	<EditText android:inputType="number" android:layout_height="wrap_content" android:id="@+id/EDITTVQuartoPotencia" android:layout_width="181dp" android:layout_x="108dp" android:layout_y="112dp">
+		<requestFocus></requestFocus>
 	</EditText>
-	<EditText   android:inputType="number" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="207dp" android:id="@+id/EDITTVQuartoQuant"></EditText>
-	<TextView  android:textColor="#000000" android:id="@+id/textView3" android:layout_height="wrap_content" android:text="Quantidade:" android:layout_width="wrap_content" android:layout_x="11dp" android:layout_y="222dp"></TextView>
-	<TextView  android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Potência:" android:layout_width="wrap_content" android:layout_x="18dp" android:layout_y="145dp"></TextView>
-	<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Voltar" android:layout_x="140dp" android:layout_y="431dp" android:id="@+id/BTTVQuartoVoltar"></Button>
+	<TextView android:text="Potência:" android:layout_height="wrap_content" android:id="@+id/textView1" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="33dp" android:layout_y="122dp"></TextView>
+	<EditText android:inputType="number" android:layout_height="wrap_content" android:id="@+id/EDITTVQuartoQuant" android:layout_width="181dp" android:layout_x="110dp" android:layout_y="170dp"></EditText>
+	<TextView android:text="Quantidade:" android:layout_height="wrap_content" android:id="@+id/textView3" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="25dp" android:layout_y="182dp"></TextView>
 </AbsoluteLayout>

@@ -6,30 +6,19 @@
 		android:background="@drawable/icon" android:id="@+id/BTChamaTVSala"></Button>
 	<Button android:background="@drawable/icon"
 		android:layout_height="wrap_content" android:layout_width="wrap_content"
-		android:layout_x="181dp" android:layout_y="117dp" android:id="@+id/BTChamaDVD"></Button>
-	<Button android:background="@drawable/icon"
-		android:layout_height="wrap_content" android:layout_width="wrap_content"
 		android:layout_x="35dp" android:layout_y="242dp" android:id="@+id/BTChamaSom"></Button>
-	<Button android:background="@drawable/icon"
-		android:layout_height="wrap_content" android:layout_width="wrap_content"
-		android:layout_x="187dp" android:layout_y="242dp" android:id="@+id/BTChamaLampSala"></Button>
 	<TextView android:textColor="#000000" android:layout_height="wrap_content"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="wrap_content" android:id="@+id/textView2"
 		android:text="TV" android:layout_x="51dp" android:layout_y="92dp"></TextView>
 	<TextView android:textColor="#000000" android:layout_height="wrap_content"
 		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_width="wrap_content" android:id="@+id/TextView01"
-		android:text="DVD" android:layout_x="186dp" android:layout_y="94dp"></TextView>
-	<TextView android:textColor="#000000" android:layout_height="wrap_content"
-		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="wrap_content" android:id="@+id/TextView02"
 		android:text="Som" android:layout_x="41dp" android:layout_y="214dp"></TextView>
-	<TextView  android:textColor="#000000" android:layout_height="wrap_content"
-		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_width="wrap_content" android:id="@+id/TextView03"
-		android:text="Lâmpada" android:layout_x="174dp" android:layout_y="213dp"></TextView>
-	<Button android:layout_height="wrap_content"
-		android:layout_width="wrap_content" android:layout_x="130dp" android:text="Voltar" android:layout_y="409dp" android:id="@+id/BTSalaVoltar"></Button>
 	<TextView android:textColor="#000000" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:id="@+id/textView1" android:text="AparelhosSala" android:layout_x="90dp" android:layout_y="17dp"></TextView>
+	<TextView android:text="DVD" android:layout_height="wrap_content" android:id="@+id/TextView01" android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_x="222dp" android:layout_y="94dp"></TextView>
+	<Button android:id="@+id/BTChamaDVD" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_x="220dp" android:layout_y="117dp"></Button>
+	<TextView android:text="Lâmpada" android:layout_height="wrap_content" android:id="@+id/TextView03" android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_x="204dp" android:layout_y="213dp"></TextView>
+	<Button android:id="@+id/BTChamaLampSala" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_x="221dp" android:layout_y="242dp"></Button>
+	<Button android:id="@+id/BTSalaVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_x="249dp" android:layout_y="325dp"></Button>
 </AbsoluteLayout>

@@ -4,12 +4,11 @@
 		
 	<TextView android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Tempo de uso:" android:layout_width="wrap_content" android:layout_x="12dp" android:layout_y="70dp"></TextView>
 	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITChuveiroTempo"></EditText>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="129dp" android:id="@+id/EDITChuveiroPotencia">
-		
-	</EditText>
-	<EditText android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="207dp" android:id="@+id/EDITChuveiroQuant"></EditText>
-	<TextView android:textColor="#000000" android:id="@+id/textView3" android:layout_height="wrap_content" android:text="Quantidade:" android:layout_width="wrap_content" android:layout_x="11dp" android:layout_y="222dp"></TextView>
-	<TextView android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Potência:" android:layout_width="wrap_content" android:layout_x="18dp" android:layout_y="145dp"></TextView>
-	<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Voltar" android:layout_x="141dp" android:layout_y="436dp" android:id="@+id/BTChuveiroVoltar"></Button>
 	<TextView android:layout_width="wrap_content" android:text="Chuveiro" android:id="@+id/textView2" android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:layout_x="122dp" android:layout_y="6dp"></TextView>
+	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/EDITChuveiroPotencia" android:layout_width="181dp" android:layout_x="113dp" android:layout_y="116dp">
+	</EditText>
+	<EditText android:layout_height="wrap_content" android:id="@+id/EDITChuveiroQuant" android:layout_width="181dp" android:layout_x="112dp" android:layout_y="176dp"></EditText>
+	<TextView android:text="Quantidade:" android:layout_height="wrap_content" android:id="@+id/textView3" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="17dp" android:layout_y="188dp"></TextView>
+	<TextView android:text="Potência:" android:layout_height="wrap_content" android:id="@+id/textView1" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="20dp" android:layout_y="129dp"></TextView>
+	<Button android:id="@+id/BTChuveiroVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_x="246dp" android:layout_y="322dp"></Button>
 </AbsoluteLayout>
