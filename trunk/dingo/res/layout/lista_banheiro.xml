@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout android:layout_width="fill_parent"
+<RelativeLayout android:id="@+id/AbsoluteLayout1" android:layout_width="fill_parent"
 	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bgcasa">
-	<Button android:layout_height="wrap_content"
-		android:layout_width="wrap_content" android:layout_x="36dp" android:text="" android:layout_y="116dp"
-		android:background="@drawable/icon" android:id="@+id/BTChamaBarbeador"></Button>
-	<Button android:background="@drawable/icon"
-		android:layout_height="wrap_content" android:layout_width="wrap_content"
-		android:layout_x="35dp" android:layout_y="242dp" android:id="@+id/BTChamaChuveiro"></Button>
-	<TextView android:textColor="#000000" android:text="AparelhosBanheiro" android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_x="58dp" android:layout_y="20dp"></TextView>
-	<TextView  android:textColor="#000000" android:text="Ap.Barbear" android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_x="18dp" android:layout_y="92dp"></TextView>
-	<TextView android:textColor="#000000" android:text="Chuveiro" android:layout_height="wrap_content" android:id="@+id/TextView02" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_x="28dp" android:layout_y="215dp"></TextView>
-	<Button android:id="@+id/BTBanheiroVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_x="242dp" android:layout_y="321dp"></Button>
-	<TextView android:text="Secador" android:layout_height="wrap_content" android:id="@+id/TextView01" android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_x="224dp" android:layout_y="88dp"></TextView>
-	<Button android:id="@+id/BTChamaSecador" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_x="233dp" android:layout_y="116dp"></Button>
-	<Button android:id="@+id/BTChamaLampBanheiro" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_x="233dp" android:layout_y="238dp"></Button>
-	<TextView android:text="Lâmpada" android:layout_height="wrap_content" android:id="@+id/TextView03" android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_x="220dp" android:layout_y="212dp"></TextView>
-</AbsoluteLayout>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="AparelhosBanheiro" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
+	<Button android:id="@+id/BTBanheiroVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentRight="true"></Button>
+	<Button android:id="@+id/BTChamaChuveiro" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_below="@+id/TextView03" android:layout_alignLeft="@+id/textView1"></Button>
+	<TextView android:layout_height="wrap_content" android:id="@+id/TextView03" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:textColor="#000000" android:text="Lâmpada" android:layout_centerVertical="true" android:layout_toLeftOf="@+id/BTBanheiroVoltar"></TextView>
+	<Button android:id="@+id/BTChamaLampBanheiro" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_alignBaseline="@+id/BTChamaChuveiro" android:layout_alignBottom="@+id/BTChamaChuveiro" android:layout_alignLeft="@+id/BTChamaSecador"></Button>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView2" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:textColor="#000000" android:text="Ap.Barbear" android:layout_below="@+id/textView1" android:layout_alignLeft="@+id/textView1" android:layout_marginTop="46dp"></TextView>
+	<Button android:id="@+id/BTChamaBarbeador" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_below="@+id/textView2" android:layout_alignLeft="@+id/textView2"></Button>
+	<TextView android:layout_height="wrap_content" android:id="@+id/TextView01" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:textColor="#000000" android:text="Secador" android:layout_above="@+id/BTChamaBarbeador" android:layout_toLeftOf="@+id/BTBanheiroVoltar"></TextView>
+	<Button android:id="@+id/BTChamaSecador" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_alignBaseline="@+id/BTChamaBarbeador" android:layout_alignBottom="@+id/BTChamaBarbeador" android:layout_alignRight="@+id/textView1"></Button>
+	<TextView android:layout_height="wrap_content" android:id="@+id/TextView02" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:textColor="#000000" android:text="Chuveiro" android:layout_alignBaseline="@+id/TextView03" android:layout_alignBottom="@+id/TextView03" android:layout_alignLeft="@+id/BTChamaChuveiro"></TextView>
+</RelativeLayout>

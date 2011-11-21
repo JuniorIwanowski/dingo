@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout android:layout_width="fill_parent"
+<RelativeLayout android:id="@+id/AbsoluteLayout1" android:layout_width="fill_parent"
 	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bglampada">
-	<TextView android:textColor="#000000" android:id="@+id/textView2" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Lâmpada" android:layout_width="wrap_content" android:layout_x="108dp" android:layout_y="8dp"></TextView>
-	<TextView android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Tempo de uso:" android:layout_width="wrap_content" android:layout_x="12dp" android:layout_y="70dp"></TextView>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITLampadaCozinhaTempo"></EditText>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/EDITLampadaCozinhaPotencia" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="108dp"></EditText>
-	<EditText android:layout_height="wrap_content" android:id="@+id/EDITLampadaCozinhaQuant" android:layout_width="181dp" android:layout_x="113dp" android:layout_y="165dp">
+	<EditText android:layout_toRightOf="@+id/textView1" android:layout_marginLeft="2dp" android:layout_below="@+id/textView2" android:layout_marginTop="14dp" android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITLampadaCozinhaTempo"></EditText>
+	<EditText android:layout_toRightOf="@+id/textView1" android:layout_marginLeft="1dp" android:layout_below="@+id/EDITLampadaCozinhaTempo" android:layout_marginTop="5dp" android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/EDITLampadaCozinhaPotencia" android:layout_width="181dp" android:layout_x="114dp" android:layout_y="108dp"></EditText>
+	<EditText android:layout_toRightOf="@+id/textView1" android:layout_marginLeft="1dp" android:layout_below="@+id/EDITLampadaCozinhaPotencia" android:layout_marginTop="6dp" android:layout_height="wrap_content" android:id="@+id/EDITLampadaCozinhaQuant" android:layout_width="181dp" android:layout_x="113dp" android:layout_y="165dp">
 		
 	</EditText>
-	<TextView android:text="Potência:" android:layout_height="wrap_content" android:id="@+id/textView1" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="16dp" android:layout_y="124dp"></TextView>
-	<TextView android:text="Quantidade:" android:layout_height="wrap_content" android:id="@+id/textView3" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="13dp" android:layout_y="172dp"></TextView>
-	<Button android:id="@+id/BTLampadaCozinhaVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_x="249dp" android:layout_y="320dp"></Button>
-</AbsoluteLayout>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView2" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="Lâmpada" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
+	<Button android:id="@+id/BTLampadaCozinhaVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentRight="true"></Button>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView3" android:layout_width="wrap_content" android:textColor="#000000" android:text="Quantidade:" android:layout_alignBaseline="@+id/EDITLampadaCozinhaQuant" android:layout_alignBottom="@+id/EDITLampadaCozinhaQuant" android:layout_alignLeft="@+id/textView1"></TextView>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textColor="#000000" android:text="Potência:" android:layout_alignBaseline="@+id/EDITLampadaCozinhaPotencia" android:layout_alignBottom="@+id/EDITLampadaCozinhaPotencia" android:layout_alignParentLeft="true"></TextView>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textColor="#000000" android:text="Tempo de uso:" android:layout_alignBaseline="@+id/EDITLampadaCozinhaTempo" android:layout_alignBottom="@+id/EDITLampadaCozinhaTempo" android:layout_alignParentLeft="true"></TextView>
+</RelativeLayout>

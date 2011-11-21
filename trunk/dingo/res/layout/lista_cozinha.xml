@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout android:layout_width="fill_parent"
+<RelativeLayout android:id="@+id/AbsoluteLayout1" android:layout_width="fill_parent"
 	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bgcasa">
-	<Button android:layout_height="wrap_content"
-		android:layout_width="wrap_content" android:layout_x="36dp" android:text="" android:layout_y="116dp"
-		android:background="@drawable/icon" android:id="@+id/BTChamaMicroondas"></Button>
-	<Button android:background="@drawable/icon"
-		android:layout_height="wrap_content" android:layout_width="wrap_content"
-		android:layout_x="35dp" android:layout_y="242dp" android:id="@+id/BTChamaBatedeira"></Button>
-	<TextView android:textColor="#000000" android:text="AparelhosCozinha" android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_x="66dp" android:layout_y="16dp"></TextView>
-	<TextView android:textColor="#000000" android:text="Microondas" android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_x="16dp" android:layout_y="91dp"></TextView>
-	<TextView android:textColor="#000000" android:text="Batedeira" android:layout_height="wrap_content" android:id="@+id/TextView02" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_x="25dp" android:layout_y="218dp"></TextView>
-	<Button android:id="@+id/BTChamaGeladeira" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_x="222dp" android:layout_y="117dp"></Button>
-	<TextView android:text="Geladeira" android:layout_height="wrap_content" android:id="@+id/TextView01" android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_x="209dp" android:layout_y="90dp"></TextView>
-	<TextView android:text="Lâmpada" android:layout_height="wrap_content" android:id="@+id/TextView03" android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_x="214dp" android:layout_y="216dp"></TextView>
-	<Button android:id="@+id/BTChamaLampCozinha" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_x="228dp" android:layout_y="240dp"></Button>
-	<Button android:id="@+id/BTCozinhaVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_x="248dp" android:layout_y="324dp"></Button>
-</AbsoluteLayout>
+	<TextView android:layout_toRightOf="@+id/textView2" android:layout_marginLeft="70dp" android:layout_below="@+id/textView1" android:layout_marginTop="35dp" android:text="Geladeira" android:layout_height="wrap_content" android:id="@+id/TextView01" android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_x="209dp" android:layout_y="90dp"></TextView>
+	<Button android:id="@+id/BTCozinhaVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentRight="true"></Button>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="AparelhosCozinha" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
+	<TextView android:layout_height="wrap_content" android:id="@+id/TextView03" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:textColor="#000000" android:text="Lâmpada" android:layout_alignBaseline="@+id/TextView02" android:layout_alignBottom="@+id/TextView02" android:layout_alignRight="@+id/TextView01"></TextView>
+	<Button android:id="@+id/BTChamaLampCozinha" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_alignBaseline="@+id/BTChamaBatedeira" android:layout_alignBottom="@+id/BTChamaBatedeira" android:layout_alignRight="@+id/textView1"></Button>
+	<TextView android:layout_height="wrap_content" android:id="@+id/TextView02" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:textColor="#000000" android:text="Batedeira" android:layout_centerVertical="true" android:layout_alignLeft="@+id/BTChamaBatedeira"></TextView>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView2" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:textColor="#000000" android:text="Microondas" android:layout_alignBaseline="@+id/TextView01" android:layout_alignBottom="@+id/TextView01" android:layout_alignParentLeft="true" android:layout_marginLeft="34dp"></TextView>
+	<Button android:id="@+id/BTChamaBatedeira" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_below="@+id/TextView02" android:layout_alignLeft="@+id/textView2"></Button>
+	<Button android:id="@+id/BTChamaMicroondas" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_below="@+id/textView2" android:layout_alignRight="@+id/BTChamaBatedeira"></Button>
+	<Button android:id="@+id/BTChamaGeladeira" android:layout_height="wrap_content" android:background="@drawable/icon" android:layout_width="wrap_content" android:layout_alignBaseline="@+id/BTChamaMicroondas" android:layout_alignBottom="@+id/BTChamaMicroondas" android:layout_alignLeft="@+id/TextView03"></Button>
+</RelativeLayout>

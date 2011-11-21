@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bglampada" android:layout_height="fill_parent" android:layout_width="fill_parent">
-	<TextView android:textColor="#000000" android:id="@+id/textView2" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Lâmpada" android:layout_width="wrap_content" android:layout_x="108dp" android:layout_y="8dp"></TextView>
-	<TextView android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Tempo de uso:" android:layout_width="wrap_content" android:layout_x="12dp" android:layout_y="70dp"></TextView>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITLampadaSalaTempo"></EditText>
-	<TextView android:text="Potência:" android:layout_height="wrap_content" android:id="@+id/textView1" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="14dp" android:layout_y="126dp"></TextView>
-	<TextView android:text="Quantidade:" android:layout_height="wrap_content" android:id="@+id/textView3" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="14dp" android:layout_y="182dp"></TextView>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/EDITLampadaSalaPotencia" android:layout_width="181dp" android:layout_x="108dp" android:layout_y="112dp">
-		
+<RelativeLayout android:id="@+id/AbsoluteLayout1" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bglampada" android:layout_height="fill_parent" android:layout_width="fill_parent">
+	<EditText android:layout_toRightOf="@+id/textView1" android:layout_marginLeft="1dp" android:layout_below="@+id/textView2" android:layout_marginTop="14dp" android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITLampadaSalaTempo"></EditText>
+	<TextView android:layout_alignLeft="@+id/textView1" android:layout_below="@+id/EDITLampadaSalaPotencia" android:layout_marginTop="12dp" android:text="Quantidade:" android:layout_height="wrap_content" android:id="@+id/textView3" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="14dp" android:layout_y="182dp"></TextView>
+	<EditText android:layout_toRightOf="@+id/textView1" android:layout_marginLeft="1dp" android:layout_below="@+id/EDITLampadaSalaPotencia" android:layout_marginTop="4dp" android:layout_height="wrap_content" android:id="@+id/EDITLampadaSalaQuant" android:layout_width="181dp" android:layout_x="110dp" android:layout_y="166dp"></EditText>
+	<Button android:id="@+id/bt_lampada_sala_voltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentRight="true"></Button>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textColor="#000000" android:text="Potência:" android:layout_alignBaseline="@+id/EDITLampadaSalaPotencia" android:layout_alignBottom="@+id/EDITLampadaSalaPotencia" android:layout_alignParentLeft="true"></TextView>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textColor="#000000" android:text="Tempo de uso:" android:layout_alignBaseline="@+id/EDITLampadaSalaTempo" android:layout_alignBottom="@+id/EDITLampadaSalaTempo" android:layout_alignParentLeft="true"></TextView>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView2" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="Lâmpada" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
+	<EditText android:layout_height="wrap_content" android:textColor="#000000" android:id="@+id/EDITLampadaSalaPotencia" android:layout_width="181dp" android:layout_below="@+id/EDITLampadaSalaTempo" android:layout_alignLeft="@+id/EDITLampadaSalaQuant">
+		<requestFocus></requestFocus>
 	</EditText>
-	<EditText android:layout_height="wrap_content" android:id="@+id/EDITLampadaSalaQuant" android:layout_width="181dp" android:layout_x="110dp" android:layout_y="166dp"></EditText>
-	<Button android:id="@+id/bt_lampada_sala_voltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_x="249dp" android:layout_y="317dp"></Button>
-</AbsoluteLayout>
+</RelativeLayout>

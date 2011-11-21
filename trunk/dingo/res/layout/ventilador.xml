@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout android:layout_width="fill_parent"
+<RelativeLayout android:id="@+id/AbsoluteLayout1" android:layout_width="fill_parent"
 	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bgventilador">
-	<TextView android:textColor="#000000" android:id="@+id/textView2" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Ventilador" android:layout_width="wrap_content" android:layout_x="108dp" android:layout_y="8dp"></TextView>
-	<TextView android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Tempo de uso:" android:layout_width="wrap_content" android:layout_x="12dp" android:layout_y="70dp"></TextView>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITVentiladorTempo"></EditText>
-	<TextView android:text="Potência:" android:layout_height="wrap_content" android:id="@+id/textView1" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="41dp" android:layout_y="130dp"></TextView>
-	<EditText android:layout_height="wrap_content" android:id="@+id/EDITVentiladorQuant" android:layout_width="181dp" android:layout_x="112dp" android:layout_y="173dp">
+	<Button android:id="@+id/BTVentiladorVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentRight="true"></Button>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textColor="#000000" android:text="Potência:" android:layout_alignBaseline="@+id/EDITVentiladorPotencia" android:layout_alignBottom="@+id/EDITVentiladorPotencia" android:layout_alignParentLeft="true"></TextView>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView3" android:layout_width="wrap_content" android:textColor="#000000" android:text="Quantidade:" android:layout_alignBaseline="@+id/EDITVentiladorQuant" android:layout_alignBottom="@+id/EDITVentiladorQuant" android:layout_alignParentLeft="true"></TextView>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textColor="#000000" android:text="Tempo de uso:" android:layout_alignBaseline="@+id/EDITVentiladorTempo" android:layout_alignBottom="@+id/EDITVentiladorTempo" android:layout_alignParentLeft="true"></TextView>
+	<EditText android:layout_height="wrap_content" android:textColor="#000000" android:id="@+id/EDITVentiladorTempo" android:layout_width="181dp" android:layout_below="@+id/textView2" android:layout_toRightOf="@+id/textView1" android:layout_marginTop="34dp"></EditText>
+	<EditText android:layout_height="wrap_content" android:textColor="#000000" android:id="@+id/EDITVentiladorPotencia" android:layout_width="181dp" android:layout_below="@+id/EDITVentiladorTempo" android:layout_alignLeft="@+id/EDITVentiladorTempo"></EditText>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView2" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="Ventilador" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
+	<EditText android:layout_height="wrap_content" android:id="@+id/EDITVentiladorQuant" android:layout_width="181dp" android:layout_below="@+id/EDITVentiladorPotencia" android:layout_alignLeft="@+id/EDITVentiladorPotencia">
 		<requestFocus></requestFocus>
 	</EditText>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/EDITVentiladorPotencia" android:layout_width="181dp" android:layout_x="113dp" android:layout_y="112dp"></EditText>
-	<TextView android:text="Quantidade:" android:layout_height="wrap_content" android:id="@+id/textView3" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="28dp" android:layout_y="182dp"></TextView>
-	<Button android:id="@+id/BTVentiladorVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_x="254dp" android:layout_y="324dp"></Button>
-</AbsoluteLayout>
+</RelativeLayout>
