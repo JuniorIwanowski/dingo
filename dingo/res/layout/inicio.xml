@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout
+<RelativeLayout android:id="@+id/AbsoluteLayout1"
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
   android:layout_width="fill_parent"
   android:background="@drawable/bgcasa"
   android:layout_height="fill_parent" android:weightSum="1">
-    <TextView android:text="Selecionar Cômodo" android:layout_height="wrap_content" android:id="@+id/textView1" android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:layout_x="64dp" android:layout_y="5dp"></TextView>
-    <Button android:id="@+id/BTChamaSala" android:text="Sala" android:layout_height="55dp" android:layout_width="211dp" android:layout_x="57dp" android:layout_y="46dp"></Button>
-    <Button android:id="@+id/BTChamaQuarto" android:text="Quarto" android:layout_height="55dp" android:layout_width="211dp" android:layout_x="57dp" android:layout_y="105dp"></Button>
-    <Button android:id="@+id/BTChamaBanheiro" android:text="Banheiro" android:layout_height="55dp" android:layout_width="211dp" android:layout_x="58dp" android:layout_y="221dp"></Button>
-    <Button android:id="@+id/BTChamaCozinha" android:text="Cozinha" android:layout_height="55dp" android:layout_width="211dp" android:layout_x="57dp" android:layout_y="161dp"></Button>
-    <Button android:id="@+id/BTCalcular" android:text="Cálculos" android:layout_height="wrap_content" android:layout_width="100dp" android:layout_x="60dp" android:layout_y="293dp"></Button>
-    <Button android:id="@+id/BTVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="100dp" android:layout_x="162dp" android:layout_y="293dp"></Button>
+    <Button android:layout_alignLeft="@+id/BTChamaSala" android:layout_below="@+id/BTChamaSala" android:layout_marginTop="3dp" android:id="@+id/BTChamaQuarto" android:text="Quarto" android:layout_height="55dp" android:layout_width="211dp" android:layout_x="57dp" android:layout_y="105dp"></Button>
+    <TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="Selecionar Cômodo" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
+    <Button android:id="@+id/BTCalcular" android:text="Cálculos" android:layout_height="wrap_content" android:layout_width="100dp" android:layout_below="@+id/BTChamaBanheiro" android:layout_alignLeft="@+id/BTChamaBanheiro"></Button>
+    <Button android:id="@+id/BTVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="100dp" android:layout_alignBaseline="@+id/BTCalcular" android:layout_alignBottom="@+id/BTCalcular" android:layout_alignRight="@+id/BTChamaBanheiro"></Button>
+    <Button android:id="@+id/BTChamaCozinha" android:text="Cozinha" android:layout_height="55dp" android:layout_width="211dp" android:layout_below="@+id/BTChamaQuarto" android:layout_alignLeft="@+id/BTChamaQuarto"></Button>
+    <Button android:id="@+id/BTChamaBanheiro" android:text="Banheiro" android:layout_height="55dp" android:layout_width="211dp" android:layout_below="@+id/BTChamaCozinha" android:layout_alignLeft="@+id/BTChamaCozinha"></Button>
+    <Button android:id="@+id/BTChamaSala" android:text="Sala" android:layout_height="55dp" android:layout_width="211dp" android:layout_below="@+id/textView1" android:layout_alignLeft="@+id/textView1" android:layout_marginTop="34dp"></Button>
     
     
-</AbsoluteLayout>
+</RelativeLayout>

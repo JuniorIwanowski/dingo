@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout android:layout_width="fill_parent"
+<RelativeLayout android:id="@+id/AbsoluteLayout1" android:layout_width="fill_parent"
 	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bgmicroonda">
-	<TextView android:textColor="#000000" android:id="@+id/textView2" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Microondas" android:layout_width="wrap_content" android:layout_x="108dp" android:layout_y="8dp"></TextView>
-	<TextView android:textColor="#000000" android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Tempo de uso:" android:layout_width="wrap_content" android:layout_x="12dp" android:layout_y="70dp"></TextView>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITMICROTempo"></EditText>
-	<EditText android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/EDITMICROPotencia" android:layout_width="181dp" android:layout_x="110dp" android:layout_y="105dp">
+	<EditText android:layout_toRightOf="@+id/textView1" android:layout_marginLeft="1dp" android:layout_below="@+id/textView2" android:layout_marginTop="14dp" android:textColor="#000000" android:layout_height="wrap_content" android:layout_width="181dp" android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITMICROTempo"></EditText>
+	<EditText android:layout_toRightOf="@+id/textView1" android:layout_marginLeft="1dp" android:layout_below="@+id/EDITMICROTempo" android:layout_marginTop="2dp" android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/EDITMICROPotencia" android:layout_width="181dp" android:layout_x="110dp" android:layout_y="105dp">
 		<requestFocus></requestFocus>
 	</EditText>
-	<TextView android:text="Potência:" android:layout_height="wrap_content" android:id="@+id/textView1" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="41dp" android:layout_y="118dp"></TextView>
-	<EditText android:layout_height="wrap_content" android:id="@+id/EDITMICROQuant" android:layout_width="181dp" android:layout_x="110dp" android:layout_y="160dp"></EditText>
-	<TextView android:text="Quantidade:" android:layout_height="wrap_content" android:id="@+id/textView3" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="25dp" android:layout_y="168dp"></TextView>
-	<Button android:id="@+id/BTMICROVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_x="250dp" android:layout_y="325dp"></Button>
-</AbsoluteLayout>
+	<EditText android:layout_alignLeft="@+id/EDITMICROPotencia" android:layout_below="@+id/EDITMICROPotencia" android:layout_marginTop="6dp" android:layout_height="wrap_content" android:id="@+id/EDITMICROQuant" android:layout_width="181dp" android:layout_x="110dp" android:layout_y="160dp"></EditText>
+	<Button android:id="@+id/BTMICROVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentRight="true"></Button>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView3" android:layout_width="wrap_content" android:textColor="#000000" android:text="Quantidade:" android:layout_alignBaseline="@+id/EDITMICROQuant" android:layout_alignBottom="@+id/EDITMICROQuant" android:layout_alignParentLeft="true"></TextView>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textColor="#000000" android:text="Potência:" android:layout_alignBaseline="@+id/EDITMICROPotencia" android:layout_alignBottom="@+id/EDITMICROPotencia" android:layout_alignParentLeft="true"></TextView>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textColor="#000000" android:text="Tempo de uso:" android:layout_alignBaseline="@+id/EDITMICROTempo" android:layout_alignBottom="@+id/EDITMICROTempo" android:layout_alignParentLeft="true"></TextView>
+	<TextView android:layout_height="wrap_content" android:id="@+id/textView2" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="Microondas" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
+</RelativeLayout>
