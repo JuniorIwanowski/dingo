@@ -317,6 +317,18 @@ public class Dingo extends Activity {
 				CarregaTelaQuarto();
 			}
 		});
+		
+		Button TVQLimpar = (Button) findViewById(R.id.BTTVQuartoLimpar);
+		TVQLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		EditText quarto_tempotv = (EditText) findViewById(R.id.EDITTVQuartoTempo);
+		EditText quarto_quanttv = (EditText) findViewById(R.id.EDITTVQuartoQuant);
+		EditText quarto_pottv = (EditText) findViewById(R.id.EDITTVQuartoPotencia);
+		
+		quarto_tempotv.setText("");
+		quarto_quanttv.setText("");
+		quarto_pottv.setText("");
+			}});
 	}
 
 	
@@ -366,6 +378,19 @@ public class Dingo extends Activity {
 				CarregaTelaQuarto();
 			}
 		});
+		
+		Button LAMPQLimpar = (Button) findViewById(R.id.BTLampadaQuartoLimpar);
+		LAMPQLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText quarto_tempolamp = (EditText) findViewById(R.id.EDITLampadaQuartoTempo);
+			EditText quarto_quantlamp = (EditText) findViewById(R.id.EDITLampadaQuartoQuant);
+			EditText quarto_potlamp = (EditText) findViewById(R.id.EDITLampadaQuartoPotencia);
+
+			quarto_tempolamp.setText("");
+			quarto_quantlamp.setText("");
+			quarto_potlamp.setText("");
+			}});
 
 	}
 	
@@ -415,6 +440,19 @@ public class Dingo extends Activity {
 				CarregaTelaQuarto();
 			}
 		});
+		
+		Button PCLimpar = (Button) findViewById(R.id.BTPCLimpar);
+		PCLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText quarto_tempopc = (EditText) findViewById(R.id.EDITPCTempo);
+			EditText quarto_quantpc = (EditText) findViewById(R.id.EDITPCQuant);
+			EditText quarto_potpc = (EditText) findViewById(R.id.EDITPCPotencia);
+
+			quarto_tempopc.setText("");
+			quarto_quantpc.setText("");
+			quarto_potpc.setText("");
+			}});
 
 	}
 	
@@ -464,6 +502,19 @@ public class Dingo extends Activity {
 				CarregaTelaQuarto();
 			}
 		});
+		
+		Button VentLimpar = (Button) findViewById(R.id.BTVentiladorLimpar);
+		VentLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText quarto_tempovent = (EditText) findViewById(R.id.EDITVentiladorTempo);
+			EditText quarto_quantvent = (EditText) findViewById(R.id.EDITVentiladorQuant);
+			EditText quarto_potvent = (EditText) findViewById(R.id.EDITVentiladorPotencia);
+
+			quarto_tempovent.setText("");
+			quarto_quantvent.setText("");
+			quarto_potvent.setText("");
+			}});
 
 	}
 	
@@ -568,6 +619,19 @@ public class Dingo extends Activity {
 				CarregaTelaCozinha();
 			}
 		});
+		
+		Button LAMPCLimpar = (Button) findViewById(R.id.BTLampadaCozinhaLimpar);
+		LAMPCLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText cozinha_tempolamp = (EditText) findViewById(R.id.EDITLampadaCozinhaTempo);
+			EditText cozinha_quantlamp = (EditText) findViewById(R.id.EDITLampadaCozinhaQuant);
+			EditText cozinha_potlamp = (EditText) findViewById(R.id.EDITLampadaCozinhaPotencia);
+
+			cozinha_tempolamp.setText("");
+			cozinha_quantlamp.setText("");
+			cozinha_potlamp.setText("");
+			}});
 
 	}
 
@@ -618,6 +682,19 @@ public class Dingo extends Activity {
 				CarregaTelaCozinha();
 			}
 		});
+		
+		Button GelaLimpar = (Button) findViewById(R.id.BTGeladeiraLimpar);
+		GelaLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText cozinha_tempogela = (EditText) findViewById(R.id.EDITGeladeiraTempo);
+			EditText cozinha_quantgela = (EditText) findViewById(R.id.EDITGeladeiraQuant);
+			EditText cozinha_potgela = (EditText) findViewById(R.id.EDITGeladeiraPotencia);
+
+			cozinha_tempogela.setText("");
+			cozinha_quantgela.setText("");
+			cozinha_potgela.setText("");
+			}});
 
 	}
 	
@@ -666,6 +743,19 @@ public class Dingo extends Activity {
 						.parseFloat(cozinha_potmicro.getText().toString());
 
 				CarregaTelaCozinha();
+			}});
+		
+		Button MicroLimpar = (Button) findViewById(R.id.BTMicroondasLimpar);
+		MicroLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText cozinha_tempomicro =(EditText) findViewById(R.id.EDITMICROTempo);
+			EditText cozinha_quantmicro = (EditText) findViewById(R.id.EDITMICROQuant);
+			EditText cozinha_potmicro = (EditText) findViewById(R.id.EDITMICROPotencia);
+
+			cozinha_tempomicro.setText("");
+			cozinha_quantmicro.setText("");
+			cozinha_potmicro.setText("");
 			}});
 
 	}
@@ -717,6 +807,19 @@ public class Dingo extends Activity {
 				CarregaTelaCozinha();
 			}
 		});
+		
+		Button BateLimpar = (Button) findViewById(R.id.BTBatedeiraLimpar);
+		BateLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText cozinha_tempobate = (EditText) findViewById(R.id.EDITBatedeiraTempo);
+			EditText cozinha_quantbate = (EditText) findViewById(R.id.EDITBatedeiraQuant);
+			EditText cozinha_potbate = (EditText) findViewById(R.id.EDITBatedeiraPotencia);
+
+			cozinha_tempobate.setText("");
+			cozinha_quantbate.setText("");
+			cozinha_potbate.setText("");
+			}});
 
 	}
 	
@@ -816,6 +919,19 @@ public class Dingo extends Activity {
 				CarregaTelaBanheiro();
 			}
 		});
+		
+		Button LAMPBLimpar = (Button) findViewById(R.id.BTLampadaBanheiroLimpar);
+		LAMPBLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText banheiro_tempolamp = (EditText) findViewById(R.id.EDITLampadaBanheiroTempo);
+			EditText banheiro_quantlamp = (EditText) findViewById(R.id.EDITLampadaBanheiroQuant);
+			EditText banheiro_potlamp = (EditText) findViewById(R.id.EDITLampadaBanheiroPotencia);
+
+			banheiro_tempolamp.setText("");
+			banheiro_quantlamp.setText("");
+			banheiro_potlamp.setText("");
+			}});
 
 	}
 	
@@ -866,6 +982,19 @@ public class Dingo extends Activity {
 				CarregaTelaBanheiro();
 			}
 		});
+		
+		Button ChuvLimpar = (Button) findViewById(R.id.BTChuveiroLimpar);
+		ChuvLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText banheiro_tempochuv = (EditText) findViewById(R.id.EDITChuveiroTempo);
+			EditText banheiro_quantchuv = (EditText) findViewById(R.id.EDITChuveiroQuant);
+			EditText banheiro_potchuv = (EditText) findViewById(R.id.EDITChuveiroPotencia);
+
+			banheiro_tempochuv.setText("");
+			banheiro_quantchuv.setText("");
+			banheiro_potchuv.setText("");
+			}});
 
 	}
 
@@ -916,6 +1045,19 @@ public class Dingo extends Activity {
 				CarregaTelaBanheiro();
 			}
 		});
+		
+		Button ChuvLimpar = (Button) findViewById(R.id.BTChuveiroLimpar);
+		ChuvLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText banheiro_temposec = (EditText) findViewById(R.id.EDITSecadorTempo);
+			EditText banheiro_quantsec = (EditText) findViewById(R.id.EDITSecadorQuant);
+			EditText banheiro_potsec = (EditText) findViewById(R.id.EDITSecadorPotencia);
+
+			banheiro_temposec.setText("");
+			banheiro_quantsec.setText("");
+			banheiro_potsec.setText("");
+			}});
 
 	}
 	
@@ -966,6 +1108,19 @@ public class Dingo extends Activity {
 				CarregaTelaBanheiro();
 			}
 		});
+		
+		Button BarbLimpar = (Button) findViewById(R.id.BTBarbeadorLimpar);
+		BarbLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText banheiro_tempobarb = (EditText) findViewById(R.id.EDITBarbeadorTempo);
+			EditText banheiro_quantbarb = (EditText) findViewById(R.id.EDITBarbeadorQuant);
+			EditText banheiro_potbarb = (EditText) findViewById(R.id.EDITBarbeadorPotencia);
+
+			banheiro_tempobarb.setText("");
+			banheiro_quantbarb.setText("");
+			banheiro_potbarb.setText("");
+			}});
 
 	}
 	
@@ -1071,6 +1226,19 @@ public class Dingo extends Activity {
 				CarregaTelaSala();
 			}
 		});
+		
+		Button LAMPSLimpar = (Button) findViewById(R.id.BTLampadaSalaLimpar);
+		LAMPSLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText sala_tempolamp = (EditText) findViewById(R.id.EDITLampadaSalaTempo);
+			EditText sala_quantlamp = (EditText) findViewById(R.id.EDITLampadaSalaQuant);
+			EditText sala_potlamp = (EditText) findViewById(R.id.EDITLampadaSalaPotencia);
+
+			sala_tempolamp.setText("");
+			sala_quantlamp.setText("");
+			sala_potlamp.setText("");
+			}});
 
 	}
 	
@@ -1121,6 +1289,19 @@ public class Dingo extends Activity {
 				CarregaTelaSala();
 			}
 		});
+		
+		Button TVSLimpar = (Button) findViewById(R.id.BTTVSalaLimpar);
+		TVSLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText sala_tempotv = (EditText) findViewById(R.id.EDITTVSalaTempo);
+			EditText sala_quanttv = (EditText) findViewById(R.id.EDITTVSalaQuant);
+			EditText sala_pottv = (EditText) findViewById(R.id.EDITTVSalaPotencia);
+
+			sala_tempotv.setText("");
+			sala_quanttv.setText("");
+			sala_pottv.setText("");
+			}});
 
 	}
 	
@@ -1171,6 +1352,19 @@ public class Dingo extends Activity {
 				CarregaTelaSala();
 			}
 		});
+		
+		Button DVDLimpar = (Button) findViewById(R.id.BTDVDLimpar);
+		DVDLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText sala_tempodvd = (EditText) findViewById(R.id.EDITDVDTempo);
+			EditText sala_quantdvd = (EditText) findViewById(R.id.EDITDVDQuant);
+			EditText sala_potdvd = (EditText) findViewById(R.id.EDITDVDPotencia);
+
+			sala_tempodvd.setText("");
+			sala_quantdvd.setText("");
+			sala_potdvd.setText("");
+			}});
 
 	}
 	
@@ -1221,6 +1415,19 @@ public class Dingo extends Activity {
 				CarregaTelaSala();
 			}
 		});
+		
+		Button SomLimpar = (Button) findViewById(R.id.BTSomLimpar);
+		SomLimpar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+		
+			EditText sala_temposom = (EditText) findViewById(R.id.EDITSomTempo);
+			EditText sala_quantsom = (EditText) findViewById(R.id.EDITSomQuant);
+			EditText sala_potsom = (EditText) findViewById(R.id.EDITSomPotencia);
+
+			sala_temposom.setText("");
+			sala_quantsom.setText("");
+			sala_potsom.setText("");
+			}});
 
 	}
 	
@@ -1419,7 +1626,7 @@ public class Dingo extends Activity {
 				
 
 				Button mudar = (Button) findViewById(R.id.btMudar);
-				
+				if (total_gasto_casa == 0) {
 				if (mudar.getText() == "Valor") {
 					mudar.setText("kW/h");
 					
@@ -1458,8 +1665,10 @@ public class Dingo extends Activity {
 					
 					
 				}
+			}else{
+				
 			}
-		});
+		}});
 		
 
 
