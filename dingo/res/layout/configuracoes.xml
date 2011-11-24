@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:background="@drawable/bgcasa">
+    <TextView android:textColor="#000000" android:id="@+id/textView1" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Dingo - Simulador de Gastos Elétricos" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"></TextView>
+    <TextView android:textColor="#000000" android:id="@+id/textView2" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="Tarifa:" android:layout_height="wrap_content" android:layout_below="@+id/textView1" android:layout_alignParentLeft="true" android:layout_marginTop="49dp"></TextView>
+    <EditText android:layout_width="100dp" android:inputType="number" android:layout_height="wrap_content" android:id="@+id/editText1" android:layout_alignBaseline="@+id/textView2" android:layout_alignBottom="@+id/textView2" android:layout_toRightOf="@+id/textView2">
+       
+    </EditText>
+    <Button android:layout_width="70dp" android:layout_height="wrap_content" android:text="Ok" android:id="@+id/BTConfiguracoesVoltar" android:layout_alignParentBottom="true" android:layout_alignParentRight="true"></Button>
+    <Button android:layout_width="70dp" android:layout_height="wrap_content" android:text="Limpar" android:id="@+id/BTConfiguracoesLimpar" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"></Button>
+    
+</RelativeLayout>
