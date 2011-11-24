@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:id="@+id/AbsoluteLayout1" android:layout_width="fill_parent"
 	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bglogo">
-    <Button android:id="@+id/btAjuda" android:text="Ajuda" android:layout_height="wrap_content" android:layout_width="86dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"></Button>
-    <Button android:id="@+id/btInicio" android:text="Inciar Simulação" android:layout_height="wrap_content" android:layout_width="206dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="34dp"></Button>
+    <Button android:id="@+id/btInicio" android:text="Inciar Simulação" android:layout_height="wrap_content" android:layout_width="230dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="34dp"></Button>
+    <Button android:layout_width="110dp" android:layout_height="wrap_content" android:text="Ajuda" android:id="@+id/btAjuda" android:layout_alignParentBottom="true" android:layout_alignRight="@+id/btInicio"></Button>
+    <Button android:layout_width="125dp" android:layout_height="wrap_content" android:text="Configurações" android:id="@+id/btConfig" android:layout_alignParentBottom="true" android:layout_alignLeft="@+id/btInicio"></Button>
 	
 	</RelativeLayout>

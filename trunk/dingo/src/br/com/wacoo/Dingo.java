@@ -7,7 +7,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.*;
-import android.widget.AdapterView.OnItemClickListener;
 
 public class Dingo extends Activity {
 
@@ -15,25 +14,7 @@ public class Dingo extends Activity {
 
 	public ListView lista;
 
-	// EditTexts e variaveis do QUARTO:
-
-	public EditText quarto_tempolamp;
-	public EditText quarto_quantlamp;
-	public EditText quarto_potlamp;
-
-	public EditText quarto_tempotv;
-	public EditText quarto_quanttv;
-	public EditText quarto_pottv;
-
-	public EditText quarto_tempopc;
-	public EditText quarto_quantpc;
-	public EditText quarto_potpc;
-
-	public EditText quarto_tempovent;
-	public EditText quarto_quantvent;
-	public EditText quarto_potvent;
-
-	// ///////
+	// variaveis do QUARTO:
 
 	public float quarto_tlamp;
 	public float quarto_qlamp;
@@ -52,30 +33,18 @@ public class Dingo extends Activity {
 	public float quarto_pvent;
 
 	public float quarto_gasto_tv;
+	public float quarto_kwh_tv;
 	public float quarto_gasto_lamp;
+	public float quarto_kwh_lamp;
 	public float quarto_gasto_pc;
+	public float quarto_kwh_pc;
 	public float quarto_gasto_vent;
+	public float quarto_kwh_vent;
+	
+	public float total_quarto_kwh;
 	public float total_gasto_quarto;
 
-	public EditText GastoQuarto;
-
-	// EditTexts e variaves da SALA
-
-	public EditText sala_tempolamp;
-	public EditText sala_quantlamp;
-	public EditText sala_potlamp;
-	
-	public EditText sala_tempotv;
-	public EditText sala_quanttv;
-	public EditText sala_pottv;
-	
-	public EditText sala_temposom;
-	public EditText sala_quantsom;
-	public EditText sala_potsom;
-	
-	public EditText sala_tempodvd;
-	public EditText sala_quantdvd;
-	public EditText sala_potdvd;
+	// variaves da SALA
 
 	public float sala_tlamp;
 	public float sala_qlamp;
@@ -94,26 +63,18 @@ public class Dingo extends Activity {
 	public float sala_pdvd;
 
 	public float sala_gasto_tv;
+	public float sala_kwh_tv;
 	public float sala_gasto_lamp;
+	public float sala_kwh_lamp;
 	public float sala_gasto_som;
+	public float sala_kwh_som;
 	public float sala_gasto_dvd;
+	public float sala_kwh_dvd;
+	
+	public float total_sala_kwh;
 	public float total_gasto_sala;
 
-	public EditText GastoSala;
-
-	// EditTexts e variaves da COZINHA
-
-	public EditText cozinha_tempogela;
-	public EditText cozinha_quantgela;
-	public EditText cozinha_pottgela;
-	
-	public EditText cozinha_tempobate;
-	public EditText cozinha_quantbate;
-	public EditText cozinha_potbate;
-	
-	public EditText cozinha_tempomicro;
-	public EditText cozinha_quantmicro;
-	public EditText cozinha_potmicro;
+	// variaves da COZINHA
 
 	public float cozinha_tgela;
 	public float cozinha_qgela;
@@ -132,30 +93,18 @@ public class Dingo extends Activity {
 	public float cozinha_plamp;
 	
 	public float cozinha_gasto_gela;
+	public float cozinha_kwh_gela;
 	public float cozinha_gasto_bate;
+	public float cozinha_kwh_bate;
 	public float cozinha_gasto_micro;
+	public float cozinha_kwh_micro;
 	public float cozinha_gasto_lamp;
+	public float cozinha_kwh_lamp;
+	
+	public float total_cozinha_kwh;
 	public float total_gasto_cozinha;
 
-	public EditText GastoCozinha;
-
-	// variaves e EditTexts do banheiro
-
-	public EditText banheiro_tempochuv;
-	public EditText banheiro_quantchuv;
-	public EditText banheiro_potchuv;
-	
-	public EditText banheiro_tempobarb;
-	public EditText banheiro_quantbarb;
-	public EditText banheiro_potbarb;
-	
-	public EditText banheiro_temposec;
-	public EditText banheiro_quantsec;
-	public EditText banheiro_potsec;
-	
-	public EditText banheiro_tempolamp;
-	public EditText banheiro_quantlamp;
-	public EditText banheiro_potlamp;
+	// variaves do banheiro
 
 	public float banheiro_tchuv;
 	public float banheiro_qchuv;
@@ -174,23 +123,19 @@ public class Dingo extends Activity {
 	public float banheiro_plamp;
 
 	public float banheiro_gasto_chuv;
+	public float banheiro_kwh_chuv;
 	public float banheiro_gasto_barb;
+	public float banheiro_kwh_barb;
 	public float banheiro_gasto_sec;
+	public float banheiro_kwh_sec;
 	public float banheiro_gasto_lamp;
+	public float banheiro_kwh_lamp;
+	
+	public float total_banheiro_kwh;
 	public float total_gasto_banheiro;
 
-	public EditText GastoBanheiro;
-
-	////////////
-
-	public TextView dica1;
-	public TextView dica2;
-	public TextView dica3;
-
-	////////////
-
-	public EditText GastoTotal;
 	public float total_gasto_casa;
+	public float total_casa_kwh;
 	
 	////////////
 
@@ -209,6 +154,13 @@ public class Dingo extends Activity {
 		btinicio.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaInicio();
+			}
+		});
+		
+		Button btconfig = (Button) findViewById(R.id.btConfig);
+		btconfig.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				CarregaTelaConfig();
 			}
 		});
 	}
@@ -365,7 +317,6 @@ public class Dingo extends Activity {
 				CarregaTelaQuarto();
 			}
 		});
-
 	}
 
 	
@@ -1307,89 +1258,210 @@ public class Dingo extends Activity {
 			}
 		});
 	}
+	
+	public void CarregaTelaConfig() {
+		setContentView(R.layout.configuracoes);
+		
+		Button btConfigVoltar = (Button) findViewById(R.id.BTConfiguracoesVoltar);
+		btConfigVoltar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				CarregaTelaPrincipal();
+			}
+		});
+	}
 
 	public void CarregaTelaCalculo() {
 		setContentView(R.layout.calculo_absolut);
 		
 		//calculos do quarto:
 		
-		quarto_gasto_tv = (((quarto_ttv*30)*quarto_ptv/1000)*tarifa)*quarto_qtv;
-		quarto_gasto_lamp = (((quarto_tlamp*30)*quarto_plamp/1000)*tarifa)*quarto_qlamp;
-		quarto_gasto_pc = (((quarto_tpc*30)*quarto_ppc/1000)*tarifa)*quarto_qpc;
-		quarto_gasto_vent = (((quarto_tvent*30)*quarto_pvent/1000)*tarifa)*quarto_qvent;
+		quarto_kwh_tv = (quarto_ttv*30)*quarto_ptv/1000;
+		quarto_kwh_lamp = (quarto_tlamp*30)*quarto_plamp/1000;
+		quarto_kwh_pc = (quarto_tpc*30)*quarto_ppc/1000;
+		quarto_kwh_vent = (quarto_tvent*30)*quarto_pvent/1000;
 		
+		quarto_gasto_tv = (quarto_kwh_tv*tarifa)*quarto_qtv;
+		quarto_gasto_lamp = (quarto_kwh_lamp*tarifa)*quarto_qlamp;
+		quarto_gasto_pc = (quarto_kwh_pc*tarifa)*quarto_qpc;
+		quarto_gasto_vent = (quarto_kwh_vent*tarifa)*quarto_qvent;
+		
+		total_quarto_kwh = quarto_kwh_tv + quarto_kwh_lamp + quarto_kwh_pc + quarto_kwh_vent;
 		total_gasto_quarto = quarto_gasto_tv + quarto_gasto_lamp + quarto_gasto_pc + quarto_gasto_vent;
 		
 		EditText GastoQuarto = (EditText) findViewById(R.id.EDITCalcQuarto);
-		GastoQuarto.setText(Dingo.getValorFormatado(total_gasto_quarto));
+		
+		if (total_gasto_quarto == 0 && total_quarto_kwh == 0) {
+			GastoQuarto.setText("");
+		}else{
+			GastoQuarto.setText(Dingo.getValorFormatado(total_gasto_quarto));
+		}
 		
 		//calculos da sala
 		
-		sala_gasto_tv = (((sala_ttv*30)*sala_ptv/1000)*tarifa)*sala_qtv;
-		sala_gasto_lamp = (((sala_tlamp*30)*sala_plamp/1000)*tarifa)*sala_qlamp;
-		sala_gasto_som = (((sala_tsom*30)*sala_psom/1000)*tarifa)*sala_qsom;
-		sala_gasto_dvd = (((sala_tdvd*30)*sala_pdvd/1000)*tarifa)*sala_qdvd;
+		sala_kwh_tv = (sala_ttv*30)*sala_ptv/1000;
+		sala_kwh_lamp = (sala_tlamp*30)*sala_plamp/1000;
+		sala_kwh_som = (sala_tsom*30)*sala_psom/1000;
+		sala_kwh_dvd = (sala_tdvd*30)*sala_pdvd/1000;
 		
+		sala_gasto_tv = (sala_kwh_tv*tarifa)*sala_qtv;
+		sala_gasto_lamp = (sala_kwh_lamp*tarifa)*sala_qlamp;
+		sala_gasto_som = (sala_kwh_som*tarifa)*sala_qsom;
+		sala_gasto_dvd = (sala_kwh_dvd*tarifa)*sala_qdvd;
+		
+		total_sala_kwh = sala_kwh_tv + sala_kwh_lamp + sala_kwh_som + sala_kwh_dvd;
 		total_gasto_sala = sala_gasto_tv + sala_gasto_lamp + sala_gasto_som + sala_gasto_dvd;
 		
 		EditText GastoSala = (EditText) findViewById(R.id.EDITCalcSala);
-		GastoSala.setText(Dingo.getValorFormatado(total_gasto_sala));
+		
+		if (total_gasto_sala == 0) {
+			GastoSala.setText("");
+		}else{
+			GastoSala.setText(Dingo.getValorFormatado(total_gasto_sala));
+		}
+		
 		
 		//calculos da cozinha
 		
-		cozinha_gasto_gela = (((cozinha_tgela*30)*cozinha_pgela/1000)*tarifa)*cozinha_qgela;
-		cozinha_gasto_bate = (((cozinha_tbate*30)*cozinha_pbate/1000)*tarifa)*cozinha_qbate;
-		cozinha_gasto_micro = (((cozinha_tmicro*30)*cozinha_pmicro/1000)*tarifa)*cozinha_qmicro;
-		cozinha_gasto_lamp = (((cozinha_tlamp*30)*cozinha_plamp/1000)*tarifa)*cozinha_qlamp;
+		cozinha_kwh_gela = (cozinha_tgela*30)*cozinha_pgela/1000;
+		cozinha_kwh_bate = (cozinha_tbate*30)*cozinha_pbate/1000;
+		cozinha_kwh_micro = (cozinha_tmicro*30)*cozinha_pmicro/1000;
+		cozinha_kwh_lamp = (cozinha_tlamp*30)*cozinha_plamp/1000;
 		
+		cozinha_gasto_gela = (cozinha_kwh_gela*tarifa)*cozinha_qgela;
+		cozinha_gasto_bate = (cozinha_kwh_bate*tarifa)*cozinha_qbate;
+		cozinha_gasto_micro = (cozinha_kwh_micro*tarifa)*cozinha_qmicro;
+		cozinha_gasto_lamp = (cozinha_kwh_lamp*tarifa)*cozinha_qlamp;
+		
+		total_cozinha_kwh = cozinha_kwh_gela + cozinha_kwh_bate + cozinha_kwh_micro + cozinha_kwh_lamp;
 		total_gasto_cozinha = cozinha_gasto_gela + cozinha_gasto_bate + cozinha_gasto_micro + cozinha_gasto_lamp;
 		
 		EditText GastoCozinha = (EditText) findViewById(R.id.EDITCalcCozinha);
-		GastoCozinha.setText(Dingo.getValorFormatado(total_gasto_cozinha));
+		
+		if (total_gasto_cozinha == 0) {
+			GastoCozinha.setText("");
+		}else{
+			GastoCozinha.setText(Dingo.getValorFormatado(total_gasto_cozinha));
+		}
+		
 		
 		//calculos do banheiro
 		
-		banheiro_gasto_chuv = (((banheiro_tchuv*30)*banheiro_pchuv/1000)*tarifa)*banheiro_qchuv;
-		banheiro_gasto_barb = (((banheiro_tbarb*30)*banheiro_pbarb/1000)*tarifa)*banheiro_qbarb;
-		banheiro_gasto_sec = (((banheiro_tsec*30)*banheiro_psec/1000)*tarifa)*banheiro_qbarb;
-		banheiro_gasto_lamp = (((banheiro_tlamp*30)*banheiro_plamp/1000)*tarifa)*banheiro_qlamp;
+		banheiro_kwh_chuv = (banheiro_tchuv*30)*banheiro_pchuv/1000;
+		banheiro_kwh_barb = (banheiro_tbarb*30)*banheiro_pbarb/1000;
+		banheiro_kwh_sec = (banheiro_tsec*30)*banheiro_psec/1000;
+		banheiro_kwh_lamp = (banheiro_tlamp*30)*banheiro_plamp/1000;
 		
+		banheiro_gasto_chuv = (banheiro_kwh_chuv*tarifa)*banheiro_qchuv;
+		banheiro_gasto_barb = (banheiro_kwh_barb*tarifa)*banheiro_qbarb;
+		banheiro_gasto_sec = (banheiro_kwh_sec*tarifa)*banheiro_qbarb;
+		banheiro_gasto_lamp = (banheiro_kwh_lamp*tarifa)*banheiro_qlamp;
+		
+		total_banheiro_kwh = banheiro_kwh_chuv + banheiro_kwh_barb + banheiro_kwh_sec + banheiro_kwh_lamp;
 		total_gasto_banheiro = banheiro_gasto_chuv + banheiro_gasto_barb + banheiro_gasto_sec + banheiro_gasto_lamp;
 		
 		EditText GastoBanheiro = (EditText) findViewById(R.id.EDITCalcBanheiro);
-		GastoBanheiro.setText(Dingo.getValorFormatado(total_gasto_banheiro));
+		
+		if (total_gasto_banheiro == 0) {
+			GastoBanheiro.setText("");
+		}else{
+			GastoBanheiro.setText(Dingo.getValorFormatado(total_gasto_banheiro));
+		}
 		
 		//calculo geral
 		
+		total_casa_kwh = total_banheiro_kwh + total_cozinha_kwh + total_sala_kwh + total_quarto_kwh;
 		total_gasto_casa = total_gasto_quarto + total_gasto_sala + total_gasto_cozinha + total_gasto_banheiro;
 		
 		EditText GastoTotal = (EditText) findViewById(R.id.EDITCalcGeral);
-		GastoTotal.setText(Dingo.getValorFormatado(total_gasto_casa));
 		
+		if (total_gasto_casa == 0) {
+			GastoTotal.setText("");
+		}else{
+			GastoTotal.setText(Dingo.getValorFormatado(total_gasto_casa));
+		}
+		
+		
+		TextView alerta = (TextView) findViewById(R.id.txtAlerta);
 		TextView dica1 = (TextView) findViewById(R.id.viewDica1);
 		TextView dica2 = (TextView) findViewById(R.id.viewDica2);
 		TextView dica3 = (TextView) findViewById(R.id.viewDica3);
 		
 		//seta as textviews dos alertas
 		
+		if (total_gasto_quarto == 0 && total_gasto_sala == 0 && total_gasto_cozinha == 0 && total_gasto_banheiro == 0) {
+			alerta.setText("");
+			dica1.setText("");
+			dica2.setText("");
+			dica3.setText("");
+		}else 
 			if (total_gasto_quarto > total_gasto_sala && total_gasto_quarto > total_gasto_cozinha && total_gasto_quarto > total_gasto_banheiro) {
-				dica1.setText("- O quarto está consumindo muita energia. Cuidado!");
-				dica2.setText("- Evite deixar fios espalhados pelo chão. Isso pode causar acidentes!");
+				dica1.setText("- O quarto está consumindo muita energia!");
+				dica2.setText("- Evite deixar fios espalhados pelo chão!");
 				dica3.setText("- Mantenha as luzes apagadas enquanto sair do quarto!");	
 			}else if (total_gasto_sala > total_gasto_quarto && total_gasto_sala > total_gasto_cozinha && total_gasto_sala > total_gasto_banheiro) {
-				dica1.setText("- A sala está consumindo muita energia. Cuidado!");
+				dica1.setText("- A sala está consumindo muita energia!");
 				dica2.setText("- Dica Sala 2");
 				dica3.setText("- Dica Sala 3");
 			}else if (total_gasto_cozinha > total_gasto_sala && total_gasto_cozinha > total_gasto_quarto && total_gasto_cozinha > total_gasto_banheiro) {
-				dica1.setText("- A cozinha está consumindo muita energia. Cuidado!");
+				dica1.setText("- A cozinha está consumindo muita energia!");
 				dica2.setText("- Dica Cozinha 2");
 				dica3.setText("- Dica Cozinha 3");
 			}else if (total_gasto_banheiro > total_gasto_sala && total_gasto_banheiro > total_gasto_cozinha && total_gasto_banheiro > total_gasto_quarto) {
-				dica1.setText("- O banheiro está consumindo muita energia. Cuidado!");
+				dica1.setText("- O banheiro está consumindo muita energia!");
 				dica2.setText("- Dica Banheiro 2");
 				dica3.setText("- Dica Banheiro 3");
 			}
 		
+		Button mudar = (Button) findViewById(R.id.btMudar);
+		mudar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+
+				
+
+				Button mudar = (Button) findViewById(R.id.btMudar);
+				
+				if (mudar.getText() == "Valor") {
+					mudar.setText("kW/h");
+					
+					EditText GastoQuarto = (EditText) findViewById(R.id.EDITCalcQuarto);
+					GastoQuarto.setText(Dingo.getValorFormatado(total_gasto_quarto));
+					
+					EditText GastoSala = (EditText) findViewById(R.id.EDITCalcSala);
+					GastoSala.setText(Dingo.getValorFormatado(total_gasto_sala));
+					
+					EditText GastoCozinha = (EditText) findViewById(R.id.EDITCalcCozinha);
+					GastoCozinha.setText(Dingo.getValorFormatado(total_gasto_cozinha));
+					
+					EditText GastoBanheiro = (EditText) findViewById(R.id.EDITCalcBanheiro);
+					GastoBanheiro.setText(Dingo.getValorFormatado(total_gasto_banheiro));
+					
+					EditText GastoTotal = (EditText) findViewById(R.id.EDITCalcGeral);
+					GastoTotal.setText(Dingo.getValorFormatado(total_gasto_casa));
+					
+				}else{
+					mudar.setText("Valor");
+					
+					EditText GastoQuarto = (EditText) findViewById(R.id.EDITCalcQuarto);
+					GastoQuarto.setText(Dingo.getKWFormatado(total_quarto_kwh));
+					
+					EditText GastoSala = (EditText) findViewById(R.id.EDITCalcSala);
+					GastoSala.setText(Dingo.getKWFormatado(total_sala_kwh));
+					
+					EditText GastoCozinha = (EditText) findViewById(R.id.EDITCalcCozinha);
+					GastoCozinha.setText(Dingo.getKWFormatado(total_cozinha_kwh));
+					
+					EditText GastoBanheiro = (EditText) findViewById(R.id.EDITCalcBanheiro);
+					GastoBanheiro.setText(Dingo.getKWFormatado(total_banheiro_kwh));
+					
+					EditText GastoTotal = (EditText) findViewById(R.id.EDITCalcGeral);
+					GastoTotal.setText(Dingo.getKWFormatado(total_casa_kwh));
+					
+					
+				}
+			}
+		});
+		
+
 
 		Button btvoltarC = (Button) findViewById(R.id.BTCalcVoltar);
 		btvoltarC.setOnClickListener(new View.OnClickListener() {
@@ -1404,6 +1476,12 @@ public class Dingo extends Activity {
 		super.onCreate(savedInstanceState);
 		CarregaTelaPrincipal();
 	}
+	
+	private static String getKWFormatado(Float f) {
+		DecimalFormat df = new DecimalFormat("00 kW/h");
+		return df.format(f);
+	}
+	
 
 	private static String getValorFormatado(Float f) {
 		Locale.setDefault(new Locale("pt", "BR"));
