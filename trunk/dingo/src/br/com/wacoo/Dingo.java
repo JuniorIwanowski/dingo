@@ -9,6 +9,37 @@ import android.view.*;
 import android.widget.*;
 
 public class Dingo extends Activity {
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    MenuInflater inflater = getMenuInflater();
+	    inflater.inflate(R.menu.menu, menu);
+	    return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	    case R.id.inicio:
+	        CarregaTelaPrincipal();
+	        return true;
+	    case R.id.comodos:
+	        CarregaTelaInicio();
+	        return true;
+	    case R.id.configs:
+	        CarregaTelaConfig();
+	        return true;
+	    case R.id.ajuda:
+	        CarregaTelaAjuda();
+	        return true;
+	    case R.id.calculos:
+	        CarregaTelaCalculo();
+	        return true;
+	    default:
+	        return super.onOptionsItemSelected(item);
+	    }
+	}
 
 	public float tarifa = 0.37554F;
 
@@ -1628,6 +1659,8 @@ public class Dingo extends Activity {
 
 				Button mudar = (Button) findViewById(R.id.btMudar);
 				if (total_gasto_casa == 0) {
+					
+				}else if (total_gasto_casa != 0){
 				if (mudar.getText() == "Valor") {
 					mudar.setText("kW/h");
 					
@@ -1666,9 +1699,7 @@ public class Dingo extends Activity {
 					
 					
 				}
-			}else{
-				
-			}
+				}
 		}});
 		
 
@@ -1688,15 +1719,23 @@ public class Dingo extends Activity {
 	}
 	
 	private static String getKWFormatado(Float f) {
+		if (f != 0) {
 		DecimalFormat df = new DecimalFormat("00 kW/h");
 		return df.format(f);
+		} else {
+			return null;
+		}
 	}
 	
 
 	private static String getValorFormatado(Float f) {
+		if (f != 0) {
 		Locale.setDefault(new Locale("pt", "BR"));
 		DecimalFormat df = new DecimalFormat("R$ 00.00");
 		return df.format(f);
+		} else {
+			return null;
+		}
 	}
 
 }
