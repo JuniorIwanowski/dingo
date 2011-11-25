@@ -206,11 +206,12 @@ public class Dingo extends Activity {
 				CarregaTelaPrincipal();
 			}
 		});
+	
 
 		Button btcalcular = (Button) findViewById(R.id.BTCalcular);
 		btcalcular.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
-
+				
 				CarregaTelaCalculo();
 
 			}
