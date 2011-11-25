@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/inicio"
+          android:icon="@drawable/dingo"
+          android:title="Início" />
+    <item android:id="@+id/comodos"
+          android:icon="@drawable/dingo"
+          android:title="Cômodos" />
+        <item android:id="@+id/calculos"
+          android:icon="@drawable/dingo"
+          android:title="Cálculos" />
+        <item android:id="@+id/configs"
+          android:icon="@drawable/dingo"
+          android:title="Configurações" />
+        <item android:id="@+id/ajuda"
+          android:icon="@drawable/dingo"
+          android:title="Ajuda" />
+</menu>
