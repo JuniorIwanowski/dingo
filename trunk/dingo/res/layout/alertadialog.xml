@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/layout_root" android:padding="10dp" android:orientation="vertical">
+ 
+ 
+ <TextView android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_width="wrap_content" android:id="@+id/dica1" android:layout_height="wrap_content" android:text=""></TextView>
+ <TextView android:layout_alignParentLeft="true" android:layout_below="@+id/dica1" android:layout_width="wrap_content" android:id="@+id/dica2" android:layout_height="wrap_content" android:text=""></TextView>
+ <TextView android:layout_alignParentLeft="true" android:layout_below="@+id/dica2" android:text="" android:id="@+id/dica3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+ <Button android:layout_centerHorizontal="true" android:layout_height="wrap_content" android:text="Ok" android:id="@+id/BTFAlerta" android:layout_below="@+id/dica3" android:layout_width="80dp"></Button>
+ 
+</RelativeLayout>
