@@ -4,8 +4,11 @@ import java.text.DecimalFormat;
 import java.util.Locale;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.*;
+import android.view.View.OnClickListener;
 import android.widget.*;
 
 public class Dingo extends Activity {
@@ -42,8 +45,8 @@ public class Dingo extends Activity {
 	}
 
 	public float tarifa = 0.37554F;
-
-	public ListView lista;
+	
+	static final int DIALOG_ALERTA = 0;
 
 	// variaveis do QUARTO:
 
@@ -174,12 +177,12 @@ public class Dingo extends Activity {
 
 		setContentView(R.layout.main);
 
-		Button btajuda = (Button) findViewById(R.id.btAjuda);
+		/*Button btajuda = (Button) findViewById(R.id.btAjuda);
 		btajuda.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaAjuda();
 			}
-		});
+		});*/
 
 		Button btinicio = (Button) findViewById(R.id.btInicio);
 		btinicio.setOnClickListener(new View.OnClickListener() {
@@ -188,12 +191,12 @@ public class Dingo extends Activity {
 			}
 		});
 		
-		Button btconfig = (Button) findViewById(R.id.btConfig);
+/*		Button btconfig = (Button) findViewById(R.id.btConfig);
 		btconfig.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaConfig();
 			}
-		});
+		});*/
 	}
 
 	public void CarregaTelaInicio() {
@@ -231,22 +234,22 @@ public class Dingo extends Activity {
 			}
 		});
 
-		Button btVoltar = (Button) findViewById(R.id.BTVoltar);
+		/*Button btVoltar = (Button) findViewById(R.id.BTVoltar);
 		btVoltar.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaPrincipal();
 			}
-		});
+		});*/
 	
 
-		Button btcalcular = (Button) findViewById(R.id.BTCalcular);
+		/*Button btcalcular = (Button) findViewById(R.id.BTCalcular);
 		btcalcular.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				
 				CarregaTelaCalculo();
 
 			}
-		});
+		});*/
 
 	}
 
@@ -258,13 +261,13 @@ public class Dingo extends Activity {
 
 		setContentView(R.layout.lista_quarto);
 
-		Button btmainQ = (Button) findViewById(R.id.BTQuartoVoltar);
+		/*Button btmainQ = (Button) findViewById(R.id.BTQuartoVoltar);
 		btmainQ.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View arg0) {
 				CarregaTelaInicio();
 			}
-		});
+		});*/
 
 		Button chamaTVQ = (Button) findViewById(R.id.BTChamaTVQuarto);
 		chamaTVQ.setOnClickListener(new View.OnClickListener() {
@@ -560,13 +563,13 @@ public class Dingo extends Activity {
 
 		setContentView(R.layout.lista_cozinha);
 
-		Button btmainC = (Button) findViewById(R.id.BTCozinhaVoltar);
+		/*Button btmainC = (Button) findViewById(R.id.BTCozinhaVoltar);
 		btmainC.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 
 				CarregaTelaInicio();
 			}
-		});
+		});*/
 
 		Button chamaLAMPC = (Button) findViewById(R.id.BTChamaLampCozinha);
 		chamaLAMPC.setOnClickListener(new View.OnClickListener() {
@@ -863,12 +866,12 @@ public class Dingo extends Activity {
 
 		setContentView(R.layout.lista_banheiro);
 
-		Button btmainB = (Button) findViewById(R.id.BTBanheiroVoltar);
+		/*Button btmainB = (Button) findViewById(R.id.BTBanheiroVoltar);
 		btmainB.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaInicio();
 			}
-		});
+		});*/
 
 		Button chamaLAMPB = (Button) findViewById(R.id.BTChamaLampBanheiro);
 		chamaLAMPB.setOnClickListener(new View.OnClickListener() {
@@ -1168,13 +1171,13 @@ public class Dingo extends Activity {
 	public void CarregaTelaSala() {
 		setContentView(R.layout.lista_sala);
 
-		Button btmainS = (Button) findViewById(R.id.BTSalaVoltar);
+		/*Button btmainS = (Button) findViewById(R.id.BTSalaVoltar);
 		btmainS.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View arg0) {
 				CarregaTelaInicio();
 			}
-		});
+		});*/
 
 		Button chamaLAMPSALA = (Button) findViewById(R.id.BTChamaLampSala);
 		chamaLAMPSALA.setOnClickListener(new View.OnClickListener() {
@@ -1479,23 +1482,23 @@ public class Dingo extends Activity {
 			}
 		});
 
-		Button btmainA = (Button) findViewById(R.id.BTAjudaVoltar);
+		/*Button btmainA = (Button) findViewById(R.id.BTAjudaVoltar);
 		btmainA.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaPrincipal();
 			}
-		});
+		});*/
 	}
 	
 	public void CarregaTelaSobre() {
 		setContentView(R.layout.sobre);
 		
-		Button btSobreVoltar = (Button) findViewById(R.id.BTSobreVoltar);
+	/*	Button btSobreVoltar = (Button) findViewById(R.id.BTSobreVoltar);
 		btSobreVoltar.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaAjuda();
 			}
-		});
+		});*/
 	}
 	
 	public void CarregaTelaConfig() {
@@ -1510,6 +1513,7 @@ public class Dingo extends Activity {
 	}
 
 	public void CarregaTelaCalculo() {
+		
 		setContentView(R.layout.calculo_absolut);
 		
 		//calculos do quarto:
@@ -1620,36 +1624,58 @@ public class Dingo extends Activity {
 		}
 		
 		
-		TextView alerta = (TextView) findViewById(R.id.txtAlerta);
-		TextView dica1 = (TextView) findViewById(R.id.viewDica1);
-		TextView dica2 = (TextView) findViewById(R.id.viewDica2);
-		TextView dica3 = (TextView) findViewById(R.id.viewDica3);
 		
-		//seta as textviews dos alertas
+		Button btAlerta = (Button) findViewById(R.id.btAlertas);
+		btAlerta.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+
+		final Dialog dialog = new Dialog(Dingo.this);
+
+		dialog.setContentView(R.layout.alertadialog);
+		dialog.setTitle("Alertas");
+		dialog.setCancelable(true);
 		
+		TextView dica1 = (TextView) dialog.findViewById(R.id.dica1);
+		TextView dica2 = (TextView) dialog.findViewById(R.id.dica2);
+		TextView dica3 = (TextView) dialog.findViewById(R.id.dica3);
+		
+		//dica1.setText("- Nunca toque em um aparelho elétrico se você estiver próximo à água.");
+		//dica2.setText("- Ao sinal de tempestade, desligue equipamentos elétricos da tomada.");
+		//dica3.setText("- Se a casa ficar desocupada por um período prolongado, desligue a chave elétrica principal.");
+
 		if (total_gasto_quarto == 0 && total_gasto_sala == 0 && total_gasto_cozinha == 0 && total_gasto_banheiro == 0) {
-			alerta.setText("");
-			dica1.setText("");
-			dica2.setText("");
-			dica3.setText("");
+			dica1.setText("Nunca toque em um aparelho elétrico se você estiver próximo à água.");
+			dica2.setText("Ao sinal de tempestade, desligue equipamentos elétricos da tomada.");
+			dica3.setText("Se a casa ficar desocupada por um período prolongado, desligue a chave elétrica principal.");
 		}else 
 			if (total_gasto_quarto > total_gasto_sala && total_gasto_quarto > total_gasto_cozinha && total_gasto_quarto > total_gasto_banheiro) {
-				dica1.setText("- O quarto está consumindo muita energia!");
-				dica2.setText("- Evite deixar fios espalhados pelo chão!");
-				dica3.setText("- Mantenha as luzes apagadas enquanto sair do quarto!");	
+				dica1.setText("O quarto está consumindo muita energia!");
+				dica2.setText("Evite deixar fios espalhados pelo chão.");
+				dica3.setText("Mantenha as luzes apagadas enquanto sair do quarto.");	
 			}else if (total_gasto_sala > total_gasto_quarto && total_gasto_sala > total_gasto_cozinha && total_gasto_sala > total_gasto_banheiro) {
-				dica1.setText("- A sala está consumindo muita energia!");
-				dica2.setText("- Dica Sala 2");
-				dica3.setText("- Dica Sala 3");
+				dica1.setText("A sala está consumindo muita energia!");
+				dica2.setText("Dica Sala 2");
+				dica3.setText("Dica Sala 3");
 			}else if (total_gasto_cozinha > total_gasto_sala && total_gasto_cozinha > total_gasto_quarto && total_gasto_cozinha > total_gasto_banheiro) {
-				dica1.setText("- A cozinha está consumindo muita energia!");
-				dica2.setText("- Dica Cozinha 2");
-				dica3.setText("- Dica Cozinha 3");
+				dica1.setText("A cozinha está consumindo muita energia!");
+				dica2.setText("Dica Cozinha 2");
+				dica3.setText("Dica Cozinha 3");
 			}else if (total_gasto_banheiro > total_gasto_sala && total_gasto_banheiro > total_gasto_cozinha && total_gasto_banheiro > total_gasto_quarto) {
-				dica1.setText("- O banheiro está consumindo muita energia!");
-				dica2.setText("- Dica Banheiro 2");
-				dica3.setText("- Dica Banheiro 3");
+				dica1.setText("O banheiro está consumindo muita energia!");
+				dica2.setText("Dica Banheiro 2");
+				dica3.setText("Dica Banheiro 3");
 			}
+		
+			Button btFechaAlerta = (Button) dialog.findViewById(R.id.BTFAlerta);
+			btFechaAlerta.setOnClickListener(new OnClickListener() {
+				//@Override
+				public void onClick(View v) {
+                dialog.dismiss();
+				
+			}});
+			
+			dialog.show();
+		}});
 		
 		Button mudar = (Button) findViewById(R.id.btMudar);
 		mudar.setOnClickListener(new View.OnClickListener() {
@@ -1704,12 +1730,12 @@ public class Dingo extends Activity {
 		
 
 
-		Button btvoltarC = (Button) findViewById(R.id.BTCalcVoltar);
+		/*Button btvoltarC = (Button) findViewById(R.id.BTCalcVoltar);
 		btvoltarC.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaInicio();
 			}
-		});
+		});*/
 	}
 
 	@Override
@@ -1737,5 +1763,7 @@ public class Dingo extends Activity {
 			return null;
 		}
 	}
+	
+	
 
 }

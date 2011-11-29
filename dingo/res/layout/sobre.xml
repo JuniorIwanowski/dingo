@@ -5,6 +5,5 @@
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
   android:background="@drawable/bgsobre">
-    <Button android:id="@+id/BTSobreVoltar" android:text="Voltar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"></Button>
     
 </RelativeLayout>
