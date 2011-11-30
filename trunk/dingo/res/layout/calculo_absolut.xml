@@ -17,6 +17,6 @@
 	<EditText android:layout_height="wrap_content" android:editable="false" android:inputType="number" android:focusable="false" android:id="@+id/EDITCalcSala" android:layout_width="wrap_content" android:layout_alignBaseline="@+id/TextView02" android:layout_alignBottom="@+id/TextView02" android:layout_alignLeft="@+id/textView1" android:layout_alignRight="@+id/EDITCalcQuarto"></EditText>
 	<EditText android:layout_height="wrap_content" android:editable="false" android:inputType="number" android:focusable="false" android:id="@+id/EDITCalcGeral" android:layout_width="231dp" android:layout_below="@+id/textView2" android:layout_alignLeft="@+id/EDITCalcSala"></EditText>
 	<TextView android:layout_height="wrap_content" android:id="@+id/textView7" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="Cálculos específicos" android:layout_below="@+id/textView1" android:layout_alignParentLeft="true" android:layout_marginTop="33dp"></TextView>
-	<Button android:layout_height="wrap_content" android:text="Alertas" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:id="@+id/btAlertas" android:layout_toLeftOf="@+id/btMudar" android:layout_alignTop="@+id/btMudar" android:layout_toRightOf="@+id/textView7"></Button>
+	<Button android:id="@+id/btAlertas" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Alertas" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"></Button>
 
 </RelativeLayout>
