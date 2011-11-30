@@ -34,7 +34,7 @@
 	<EditText android:inputType="number" android:layout_height="wrap_content"
 		android:textColor="#000000" android:id="@+id/EDITBarbeadorPotencia"
 		android:layout_width="181dp" android:layout_below="@+id/EDITBarbeadorTempo"
-		android:layout_alignLeft="@+id/textView2" android:layout_toLeftOf="@+id/BTBarbeadorVoltar">
+		android:layout_alignLeft="@+id/textView2" android:text="10" android:layout_toLeftOf="@+id/BTBarbeadorVoltar">
 		<requestFocus></requestFocus>
 	</EditText>
 

@@ -5,7 +5,6 @@ import java.util.Locale;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.*;
 import android.view.View.OnClickListener;
@@ -44,9 +43,7 @@ public class Dingo extends Activity {
 	    }
 	}
 
-	public float tarifa = 0.37554F;
-	
-	static final int DIALOG_ALERTA = 0;
+	public float tarifa;
 
 	// variaveis do QUARTO:
 
@@ -1081,8 +1078,8 @@ public class Dingo extends Activity {
 			}
 		});
 		
-		Button ChuvLimpar = (Button) findViewById(R.id.BTChuveiroLimpar);
-		ChuvLimpar.setOnClickListener(new View.OnClickListener() {
+		Button SecLimpar = (Button) findViewById(R.id.BTSecadorLimpar);
+		SecLimpar.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 		
 			EditText banheiro_temposec = (EditText) findViewById(R.id.EDITSecadorTempo);
@@ -1479,8 +1476,28 @@ public class Dingo extends Activity {
 		btsobre.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaSobre();
-			}
-		});
+			}});
+		
+	Button btFormulas = (Button) findViewById(R.id.BTFormulas);
+	btFormulas.setOnClickListener(new View.OnClickListener() {
+		public void onClick(View arg0) {
+
+		final Dialog dialog2 = new Dialog(Dingo.this);
+
+		dialog2.setContentView(R.layout.formulasdialog);
+		dialog2.setTitle("Fórmulas");
+		dialog2.setCancelable(true);
+		
+		Button btFechaF = (Button) dialog2.findViewById(R.id.BTFVoltar);
+		btFechaF.setOnClickListener(new OnClickListener() {
+			//@Override
+			public void onClick(View v) {
+            dialog2.dismiss();
+		}});
+		dialog2.show();
+	}});
+		
+		
 
 		/*Button btmainA = (Button) findViewById(R.id.BTAjudaVoltar);
 		btmainA.setOnClickListener(new View.OnClickListener() {
@@ -1507,6 +1524,20 @@ public class Dingo extends Activity {
 		Button btConfigVoltar = (Button) findViewById(R.id.BTConfiguracoesVoltar);
 		btConfigVoltar.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
+				
+				EditText tarifavigente = (EditText) findViewById(R.id.EDITTarifa);
+				
+				if (tarifavigente.getText() == null
+						|| tarifavigente.getText().length() == 0
+						|| tarifavigente.getText().equals("0")) {
+					tarifavigente.setText("0");
+				} else {
+					//
+				}
+				
+				tarifa = Float.parseFloat(tarifavigente.getText()
+						.toString());
+				
 				CarregaTelaPrincipal();
 			}
 		});
@@ -1638,32 +1669,28 @@ public class Dingo extends Activity {
 		TextView dica1 = (TextView) dialog.findViewById(R.id.dica1);
 		TextView dica2 = (TextView) dialog.findViewById(R.id.dica2);
 		TextView dica3 = (TextView) dialog.findViewById(R.id.dica3);
-		
-		//dica1.setText("- Nunca toque em um aparelho elétrico se você estiver próximo à água.");
-		//dica2.setText("- Ao sinal de tempestade, desligue equipamentos elétricos da tomada.");
-		//dica3.setText("- Se a casa ficar desocupada por um período prolongado, desligue a chave elétrica principal.");
 
-		if (total_gasto_quarto == 0 && total_gasto_sala == 0 && total_gasto_cozinha == 0 && total_gasto_banheiro == 0) {
-			dica1.setText("Nunca toque em um aparelho elétrico se você estiver próximo à água.");
-			dica2.setText("Ao sinal de tempestade, desligue equipamentos elétricos da tomada.");
-			dica3.setText("Se a casa ficar desocupada por um período prolongado, desligue a chave elétrica principal.");
+		if (total_gasto_quarto == 0 && total_gasto_sala == 0 && total_gasto_cozinha == 0 && total_gasto_banheiro == 0) {	
+			dica1.setText("- Nunca toque em um aparelho elétrico se você estiver próximo à água.");
+			dica2.setText("- Ao sinal de tempestade, desligue equipamentos elétricos da tomada.");
+			dica3.setText("- Se a casa ficar desocupada por um período prolongado, desligue a chave elétrica principal.");
 		}else 
 			if (total_gasto_quarto > total_gasto_sala && total_gasto_quarto > total_gasto_cozinha && total_gasto_quarto > total_gasto_banheiro) {
-				dica1.setText("O quarto está consumindo muita energia!");
-				dica2.setText("Evite deixar fios espalhados pelo chão.");
-				dica3.setText("Mantenha as luzes apagadas enquanto sair do quarto.");	
+				dica1.setText("- Nas pausas mais curtas, desligue o monitor. Ele é responsável por 70% do consumo de energia do computador.");
+				dica2.setText("- Evite deixar fios espalhados pelo chão.");
+				dica3.setText("- Evite dormir com a televisão ligada. Uma opção é programar o aparelho para desligar sozinho (timer).");	
 			}else if (total_gasto_sala > total_gasto_quarto && total_gasto_sala > total_gasto_cozinha && total_gasto_sala > total_gasto_banheiro) {
-				dica1.setText("A sala está consumindo muita energia!");
-				dica2.setText("Dica Sala 2");
-				dica3.setText("Dica Sala 3");
+				dica1.setText("- Dê preferência às lâmpadas fluorescentes compactas (LFC) ou circulares.");
+				dica2.setText("- Nunca desligue a TV através somente do controle remoto. Desligue-a da tomada.");
+				dica3.setText("- O consumo de aparelhos em stand-by pode representar 12% do consumo doméstico de energia.");
 			}else if (total_gasto_cozinha > total_gasto_sala && total_gasto_cozinha > total_gasto_quarto && total_gasto_cozinha > total_gasto_banheiro) {
-				dica1.setText("A cozinha está consumindo muita energia!");
-				dica2.setText("Dica Cozinha 2");
-				dica3.setText("Dica Cozinha 3");
+				dica1.setText("- Geladeiras e freezers não devem ficar perto do fogão nem de outras fontes de calor.");
+				dica2.setText("- Pinte o teto e as paredes internas com cores claras, que refletem melhor a luz, diminuindo a necessidade de iluminação artificial.");
+				dica3.setText("- Não guarde alimentos ou líquidos quentes na geladeira.");
 			}else if (total_gasto_banheiro > total_gasto_sala && total_gasto_banheiro > total_gasto_cozinha && total_gasto_banheiro > total_gasto_quarto) {
-				dica1.setText("O banheiro está consumindo muita energia!");
-				dica2.setText("Dica Banheiro 2");
-				dica3.setText("Dica Banheiro 3");
+				dica1.setText("- Colocar o chuveiro na posição verão gera uma economia de 30%.");
+				dica2.setText("- O uso excessivo do secador pode ser prejudicial à saúde.");
+				dica3.setText("- Barbeadores apresentam vários riscos como cortes e choques elétricos.");
 			}
 		
 			Button btFechaAlerta = (Button) dialog.findViewById(R.id.BTFAlerta);
@@ -1737,7 +1764,7 @@ public class Dingo extends Activity {
 			}
 		});*/
 	}
-
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -1763,7 +1790,5 @@ public class Dingo extends Activity {
 			return null;
 		}
 	}
-	
-	
 
 }
