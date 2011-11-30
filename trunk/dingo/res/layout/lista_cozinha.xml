@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:id="@+id/AbsoluteLayout1" android:layout_width="fill_parent"
-	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bgcasa">
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/dingo_home">
 	<TextView android:layout_toRightOf="@+id/textView2" android:layout_marginLeft="70dp" android:layout_below="@+id/textView1" android:layout_marginTop="35dp" android:text="Geladeira" android:layout_height="wrap_content" android:id="@+id/TextView01" android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_x="209dp" android:layout_y="90dp"></TextView>
 	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="Cozinha" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
 	<TextView android:layout_height="wrap_content" android:id="@+id/TextView03" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:textColor="#000000" android:text="Lâmpada" android:layout_alignBaseline="@+id/TextView02" android:layout_alignBottom="@+id/TextView02" android:layout_alignRight="@+id/TextView01"></TextView>
