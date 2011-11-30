@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:id="@+id/AbsoluteLayout1" android:layout_width="fill_parent"
-	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bgcasa">
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/dingo_home">
 	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="Banheiro" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
 	<TextView android:layout_height="wrap_content" android:id="@+id/TextView02" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:textColor="#000000" android:text="Chuveiro" android:layout_alignBaseline="@+id/TextView03" android:layout_alignBottom="@+id/TextView03" android:layout_alignLeft="@+id/BTChamaChuveiro"></TextView>
 	<Button android:layout_width="wrap_content" android:background="@drawable/icon" android:id="@+id/BTChamaChuveiro" android:layout_height="wrap_content" android:layout_below="@+id/TextView02" android:layout_toLeftOf="@+id/textView1" android:layout_marginRight="30dp"></Button>

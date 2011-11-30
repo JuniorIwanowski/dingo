@@ -5,6 +5,7 @@ import java.util.Locale;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.*;
 import android.view.View.OnClickListener;
@@ -361,6 +362,18 @@ public class Dingo extends Activity {
 		quarto_quanttv.setText("");
 		quarto_pottv.setText("");
 			}});
+		
+		Button TVQSug = (Button) findViewById(R.id.BTSugestaoTVQuarto);
+		TVQSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText quarto_tempotv = (EditText) findViewById(R.id.EDITTVQuartoTempo);
+				EditText quarto_quanttv = (EditText) findViewById(R.id.EDITTVQuartoQuant);
+				EditText quarto_pottv = (EditText) findViewById(R.id.EDITTVQuartoPotencia);
+				
+				quarto_tempotv.setText("100");
+				quarto_quanttv.setText("1");
+				quarto_pottv.setText("1.5");	
+			}});
 	}
 
 	
@@ -422,6 +435,18 @@ public class Dingo extends Activity {
 			quarto_tempolamp.setText("");
 			quarto_quantlamp.setText("");
 			quarto_potlamp.setText("");
+			}});
+		
+		Button LAMPQSug = (Button) findViewById(R.id.BTSugestaoLampadaQuarto);
+		LAMPQSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText quarto_tempolamp = (EditText) findViewById(R.id.EDITLampadaQuartoTempo);
+				EditText quarto_quantlamp = (EditText) findViewById(R.id.EDITLampadaQuartoQuant);
+				EditText quarto_potlamp = (EditText) findViewById(R.id.EDITLampadaQuartoPotencia);
+
+				quarto_tempolamp.setText("5");
+				quarto_quantlamp.setText("1");
+				quarto_potlamp.setText("9");	
 			}});
 
 	}
@@ -485,6 +510,18 @@ public class Dingo extends Activity {
 			quarto_quantpc.setText("");
 			quarto_potpc.setText("");
 			}});
+		
+		Button PCSug = (Button) findViewById(R.id.BTSugestaoPC);
+		PCSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText quarto_tempopc = (EditText) findViewById(R.id.EDITPCTempo);
+				EditText quarto_quantpc = (EditText) findViewById(R.id.EDITPCQuant);
+				EditText quarto_potpc = (EditText) findViewById(R.id.EDITPCPotencia);
+
+				quarto_tempopc.setText("5");
+				quarto_quantpc.setText("1");
+				quarto_potpc.setText("300");
+			}});
 
 	}
 	
@@ -546,6 +583,18 @@ public class Dingo extends Activity {
 			quarto_tempovent.setText("");
 			quarto_quantvent.setText("");
 			quarto_potvent.setText("");
+			}});
+		
+		Button VentSug = (Button) findViewById(R.id.BTSugestaoVentilador);
+		VentSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText quarto_tempopc = (EditText) findViewById(R.id.EDITPCTempo);
+				EditText quarto_quantpc = (EditText) findViewById(R.id.EDITPCQuant);
+				EditText quarto_potpc = (EditText) findViewById(R.id.EDITPCPotencia);
+
+				quarto_tempopc.setText("8");
+				quarto_quantpc.setText("1");
+				quarto_potpc.setText("120");
 			}});
 
 	}
@@ -664,6 +713,18 @@ public class Dingo extends Activity {
 			cozinha_quantlamp.setText("");
 			cozinha_potlamp.setText("");
 			}});
+		
+		Button LAMPCSug = (Button) findViewById(R.id.BTSugestaoLampadaCozinha);
+		LAMPCSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText cozinha_tempolamp = (EditText) findViewById(R.id.EDITLampadaCozinhaTempo);
+				EditText cozinha_quantlamp = (EditText) findViewById(R.id.EDITLampadaCozinhaQuant);
+				EditText cozinha_potlamp = (EditText) findViewById(R.id.EDITLampadaCozinhaPotencia);
+
+				cozinha_tempolamp.setText("5");
+				cozinha_quantlamp.setText("1");
+				cozinha_potlamp.setText("9");
+			}});
 
 	}
 
@@ -727,6 +788,18 @@ public class Dingo extends Activity {
 			cozinha_quantgela.setText("");
 			cozinha_potgela.setText("");
 			}});
+		
+		Button GelaSug = (Button) findViewById(R.id.BTSugestaoGeladeira);
+		GelaSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText cozinha_tempogela = (EditText) findViewById(R.id.EDITGeladeiraTempo);
+				EditText cozinha_quantgela = (EditText) findViewById(R.id.EDITGeladeiraQuant);
+				EditText cozinha_potgela = (EditText) findViewById(R.id.EDITGeladeiraPotencia);
+
+				cozinha_tempogela.setText("24");
+				cozinha_quantgela.setText("1");
+				cozinha_potgela.setText("130");
+			}});
 
 	}
 	
@@ -788,6 +861,18 @@ public class Dingo extends Activity {
 			cozinha_tempomicro.setText("");
 			cozinha_quantmicro.setText("");
 			cozinha_potmicro.setText("");
+			}});
+		
+		Button MicroSug = (Button) findViewById(R.id.BTSugestaoMicroondas);
+		MicroSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText cozinha_tempomicro =(EditText) findViewById(R.id.EDITMICROTempo);
+				EditText cozinha_quantmicro = (EditText) findViewById(R.id.EDITMICROQuant);
+				EditText cozinha_potmicro = (EditText) findViewById(R.id.EDITMICROPotencia);
+
+				cozinha_tempomicro.setText("0.2");
+				cozinha_quantmicro.setText("1");
+				cozinha_potmicro.setText("1200");
 			}});
 
 	}
@@ -851,6 +936,18 @@ public class Dingo extends Activity {
 			cozinha_tempobate.setText("");
 			cozinha_quantbate.setText("");
 			cozinha_potbate.setText("");
+			}});
+		
+		Button BateSug = (Button) findViewById(R.id.BTSugestaoBatedeira);
+		BateSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText cozinha_tempobate = (EditText) findViewById(R.id.EDITBatedeiraTempo);
+				EditText cozinha_quantbate = (EditText) findViewById(R.id.EDITBatedeiraQuant);
+				EditText cozinha_potbate = (EditText) findViewById(R.id.EDITBatedeiraPotencia);
+
+				cozinha_tempobate.setText("0.3");
+				cozinha_quantbate.setText("1");
+				cozinha_potbate.setText("200");
 			}});
 
 	}
@@ -964,6 +1061,18 @@ public class Dingo extends Activity {
 			banheiro_quantlamp.setText("");
 			banheiro_potlamp.setText("");
 			}});
+		
+		Button LAMPBSug = (Button) findViewById(R.id.BTSugestaoLampadaBanheiro);
+		LAMPBSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText banheiro_tempolamp = (EditText) findViewById(R.id.EDITLampadaBanheiroTempo);
+				EditText banheiro_quantlamp = (EditText) findViewById(R.id.EDITLampadaBanheiroQuant);
+				EditText banheiro_potlamp = (EditText) findViewById(R.id.EDITLampadaBanheiroPotencia);
+
+				banheiro_tempolamp.setText("5");
+				banheiro_quantlamp.setText("1");
+				banheiro_potlamp.setText("9");
+			}});
 
 	}
 	
@@ -1026,6 +1135,18 @@ public class Dingo extends Activity {
 			banheiro_tempochuv.setText("");
 			banheiro_quantchuv.setText("");
 			banheiro_potchuv.setText("");
+			}});
+		
+		Button ChuvSug = (Button) findViewById(R.id.BTSugestaoChuveiro);
+		ChuvSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText banheiro_tempochuv = (EditText) findViewById(R.id.EDITChuveiroTempo);
+				EditText banheiro_quantchuv = (EditText) findViewById(R.id.EDITChuveiroQuant);
+				EditText banheiro_potchuv = (EditText) findViewById(R.id.EDITChuveiroPotencia);
+
+				banheiro_tempochuv.setText("0.1");
+				banheiro_quantchuv.setText("1");
+				banheiro_potchuv.setText("3500");
 			}});
 
 	}
@@ -1090,6 +1211,18 @@ public class Dingo extends Activity {
 			banheiro_quantsec.setText("");
 			banheiro_potsec.setText("");
 			}});
+		
+		Button SecSug = (Button) findViewById(R.id.BTSugestaoSecador);
+		SecSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText banheiro_temposec = (EditText) findViewById(R.id.EDITSecadorTempo);
+				EditText banheiro_quantsec = (EditText) findViewById(R.id.EDITSecadorQuant);
+				EditText banheiro_potsec = (EditText) findViewById(R.id.EDITSecadorPotencia);
+
+				banheiro_temposec.setText("0.1");
+				banheiro_quantsec.setText("1");
+				banheiro_potsec.setText("1400");
+			}});
 
 	}
 	
@@ -1152,6 +1285,18 @@ public class Dingo extends Activity {
 			banheiro_tempobarb.setText("");
 			banheiro_quantbarb.setText("");
 			banheiro_potbarb.setText("");
+			}});
+		
+		Button BarbSug = (Button) findViewById(R.id.BTSugestaoBarbeador);
+		BarbSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText banheiro_tempobarb = (EditText) findViewById(R.id.EDITBarbeadorTempo);
+				EditText banheiro_quantbarb = (EditText) findViewById(R.id.EDITBarbeadorQuant);
+				EditText banheiro_potbarb = (EditText) findViewById(R.id.EDITBarbeadorPotencia);
+
+				banheiro_tempobarb.setText("0.3");
+				banheiro_quantbarb.setText("1");
+				banheiro_potbarb.setText("10");
 			}});
 
 	}
@@ -1271,6 +1416,18 @@ public class Dingo extends Activity {
 			sala_quantlamp.setText("");
 			sala_potlamp.setText("");
 			}});
+		
+		Button LAMPSSug = (Button) findViewById(R.id.BTSugestaoLampadaSala);
+		LAMPSSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText sala_tempolamp = (EditText) findViewById(R.id.EDITLampadaSalaTempo);
+				EditText sala_quantlamp = (EditText) findViewById(R.id.EDITLampadaSalaQuant);
+				EditText sala_potlamp = (EditText) findViewById(R.id.EDITLampadaSalaPotencia);
+
+				sala_tempolamp.setText("5");
+				sala_quantlamp.setText("1");
+				sala_potlamp.setText("9");
+			}});
 
 	}
 	
@@ -1333,6 +1490,18 @@ public class Dingo extends Activity {
 			sala_tempotv.setText("");
 			sala_quanttv.setText("");
 			sala_pottv.setText("");
+			}});
+		
+		Button TVSSug = (Button) findViewById(R.id.BTSugestaoTVSala);
+		TVSSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText sala_tempotv = (EditText) findViewById(R.id.EDITTVSalaTempo);
+				EditText sala_quanttv = (EditText) findViewById(R.id.EDITTVSalaQuant);
+				EditText sala_pottv = (EditText) findViewById(R.id.EDITTVSalaPotencia);
+
+				sala_tempotv.setText("1.5");
+				sala_quanttv.setText("1");
+				sala_pottv.setText("100");
 			}});
 
 	}
@@ -1397,6 +1566,18 @@ public class Dingo extends Activity {
 			sala_quantdvd.setText("");
 			sala_potdvd.setText("");
 			}});
+		
+		Button DVDSug = (Button) findViewById(R.id.BTSugestaoDVD);
+		DVDSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText sala_tempodvd = (EditText) findViewById(R.id.EDITDVDTempo);
+				EditText sala_quantdvd = (EditText) findViewById(R.id.EDITDVDQuant);
+				EditText sala_potdvd = (EditText) findViewById(R.id.EDITDVDPotencia);
+
+				sala_tempodvd.setText("2");
+				sala_quantdvd.setText("1");
+				sala_potdvd.setText("50");
+			}});
 
 	}
 	
@@ -1460,6 +1641,18 @@ public class Dingo extends Activity {
 			sala_quantsom.setText("");
 			sala_potsom.setText("");
 			}});
+		
+		Button SomSug = (Button) findViewById(R.id.BTSugestaoSom);
+		SomSug.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				EditText sala_temposom = (EditText) findViewById(R.id.EDITSomTempo);
+				EditText sala_quantsom = (EditText) findViewById(R.id.EDITSomQuant);
+				EditText sala_potsom = (EditText) findViewById(R.id.EDITSomPotencia);
+
+				sala_temposom.setText("3");
+				sala_quantsom.setText("1");
+				sala_potsom.setText("80");
+			}});
 
 	}
 	
@@ -1510,16 +1703,28 @@ public class Dingo extends Activity {
 	public void CarregaTelaSobre() {
 		setContentView(R.layout.sobre);
 		
-	/*	Button btSobreVoltar = (Button) findViewById(R.id.BTSobreVoltar);
+		Button btSobreVoltar = (Button) findViewById(R.id.BTSobreVoltar);
 		btSobreVoltar.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				CarregaTelaAjuda();
 			}
-		});*/
+		});
 	}
 	
 	public void CarregaTelaConfig() {
 		setContentView(R.layout.configuracoes);
+		
+		EditText tarifavigente = (EditText) findViewById(R.id.EDITTarifa);
+		
+		SharedPreferences settings = getPreferences(0);
+		tarifa = settings.getFloat("tarifa", tarifa);
+		
+		if (tarifa == 0) {
+			tarifavigente.setText("");
+		}else{
+		tarifavigente.setText(String.valueOf(tarifa));
+		}
+		
 		
 		Button btConfigVoltar = (Button) findViewById(R.id.BTConfiguracoesVoltar);
 		btConfigVoltar.setOnClickListener(new View.OnClickListener() {
@@ -1537,6 +1742,12 @@ public class Dingo extends Activity {
 				
 				tarifa = Float.parseFloat(tarifavigente.getText()
 						.toString());
+				
+				
+				SharedPreferences settings = getPreferences(0);
+				SharedPreferences.Editor editor = settings.edit();
+				editor.putFloat("tarifa", tarifa);
+				editor.commit();
 				
 				CarregaTelaPrincipal();
 			}

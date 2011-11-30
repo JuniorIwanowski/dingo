@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:id="@+id/AbsoluteLayout1" android:layout_width="fill_parent"
-	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bgcasa">
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/dingo_home">
 	<TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="Sala" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
 	<TextView android:layout_height="wrap_content" android:id="@+id/TextView02" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:textColor="#000000" android:text="Som" android:layout_above="@+id/BTChamaLampSala" android:layout_alignRight="@+id/BTChamaSom"></TextView>
 	<TextView android:layout_height="wrap_content" android:id="@+id/TextView01" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:textColor="#000000" android:text="DVD" android:layout_alignBaseline="@+id/textView2" android:layout_alignBottom="@+id/textView2" android:layout_alignLeft="@+id/BTChamaDVD"></TextView>
