@@ -4,7 +4,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:background="@drawable/bgbarbeador" android:layout_x="114dp"
 	android:layout_y="129dp">
-	<EditText android:inputType="number" android:layout_below="@+id/textView2"
+	<EditText android:inputType="numberDecimal" android:layout_below="@+id/textView2"
 		android:layout_marginTop="16dp" android:textColor="#000000"
 		android:layout_height="wrap_content" android:layout_width="181dp"
 		android:layout_x="111dp" android:layout_y="54dp" android:id="@+id/EDITBarbeadorTempo"
@@ -31,14 +31,14 @@
 		android:text="Tempo de uso:" android:layout_alignBaseline="@+id/EDITBarbeadorTempo"
 		android:layout_alignBottom="@+id/EDITBarbeadorTempo"
 		android:layout_alignLeft="@+id/textView3"></TextView>
-	<EditText android:inputType="number" android:layout_height="wrap_content"
+	<EditText android:inputType="numberDecimal" android:layout_height="wrap_content"
 		android:textColor="#000000" android:id="@+id/EDITBarbeadorPotencia"
 		android:layout_width="181dp" android:layout_below="@+id/EDITBarbeadorTempo"
 		android:layout_alignLeft="@+id/textView2"  android:layout_toLeftOf="@+id/BTBarbeadorVoltar">
 		
 	</EditText>
 
-	<EditText android:inputType="number" android:layout_height="wrap_content"
+	<EditText android:inputType="numberDecimal" android:layout_height="wrap_content"
 		android:id="@+id/EDITBarbeadorQuant" android:layout_width="181dp"
 		android:layout_below="@+id/EDITBarbeadorPotencia"
 		android:layout_alignLeft="@+id/EDITBarbeadorPotencia"
