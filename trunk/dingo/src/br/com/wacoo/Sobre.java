@@ -3,11 +3,12 @@ package br.com.wacoo;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.*;
-import android.widget.*;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
-public class Dingo extends Activity {
-
+public class Sobre extends Activity {
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 	    MenuInflater inflater = getMenuInflater();
@@ -44,17 +45,14 @@ public class Dingo extends Activity {
 	    }
 	}
 
+	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
-
-		Button btinicio = (Button) findViewById(R.id.btInicio);
-		btinicio.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View arg0) {
-				 Intent i = new Intent(Dingo.this, Inicio.class);
-		         startActivity(i);
-			}});
+	    super.onCreate(savedInstanceState);
+	    
+	    setContentView(R.layout.sobre);
+	
+	    // TODO Auto-generated method stub
 	}
 
 }
