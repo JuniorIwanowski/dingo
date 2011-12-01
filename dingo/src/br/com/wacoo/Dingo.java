@@ -1,5 +1,7 @@
 package br.com.wacoo;
 
+import java.text.DecimalFormat;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +9,15 @@ import android.view.*;
 import android.widget.*;
 
 public class Dingo extends Activity {
+	
+	/*public String getMinFormatado(Float f) {
+		if (f != 0) {
+		DecimalFormat df = new DecimalFormat("00 kW/h");
+		return df.format(f);
+		} else {
+			return null;
+		}
+	}*/
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
