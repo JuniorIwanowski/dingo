@@ -7,8 +7,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class Barbeador extends Activity {
 	
@@ -57,9 +59,24 @@ public class Barbeador extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.barbeador);
+	    
+	   /* 
+	    TextView t = (TextView)findViewById(R.id.textView4);
+	    t.setOnClickListener(new View.OnClickListener() {
+	    	
+	    public void onClick(View arg0) {
+	    	TextView t = (TextView)findViewById(R.id.textView4);
+	    	if (t.getText() == "Hrs/dia") {
+	        t.setText("Min/dia");  
+	    	}else{
+	    		t.setText("Hrs/dia");
+	    	}
+	        }});
+	        */
 
 		Button BARBVoltar = (Button) findViewById(R.id.BTBarbeadorVoltar);
 		BARBVoltar.setOnClickListener(new View.OnClickListener() {
+			
 
 			public void onClick(View arg0) {
 
