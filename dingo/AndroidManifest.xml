@@ -14,7 +14,32 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
+        </activity><activity android:name="Inicio"></activity>
+        
+        <activity android:name="Sala"></activity>
+        <activity android:name="LampadaSala"></activity>
+        <activity android:name="TVSala"></activity>
+        <activity android:name="DVD"></activity><activity android:name="Som"></activity><activity android:name="Quarto"></activity>
+        <activity android:name="LampadaQuarto"></activity><activity android:name="PC"></activity><activity android:name="Ventilador"></activity><activity android:name="TVQuarto"></activity><activity android:name="Cozinha"></activity>
+        <activity android:name="LampadaCozinha"></activity><activity android:name="Geladeira"></activity><activity android:name="Microondas"></activity><activity android:name="Batedeira"></activity><activity android:name="Banheiro"></activity>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <activity android:name="LampadaBanheiro"></activity>
+        <activity android:name="Barbeador"></activity>
+        <activity android:name="Secador"></activity><activity android:name="Chuveiro"></activity><activity android:name="Config"></activity>
+        
+        <activity android:name="Ajuda"></activity>
+        <activity android:name="Sobre"></activity>
+        <activity android:name="Calculos"></activity>
+        <activity android:name="MenuDingo"></activity>
+        
     </application>
 </manifest>

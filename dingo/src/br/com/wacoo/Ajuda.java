@@ -1,13 +1,18 @@
 package br.com.wacoo;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.*;
-import android.widget.*;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-public class Dingo extends Activity {
-
+public class Ajuda extends Activity {
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 	    MenuInflater inflater = getMenuInflater();
@@ -44,17 +49,42 @@ public class Dingo extends Activity {
 	    }
 	}
 
+	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
-
-		Button btinicio = (Button) findViewById(R.id.btInicio);
-		btinicio.setOnClickListener(new View.OnClickListener() {
+	    super.onCreate(savedInstanceState);
+	    
+setContentView(R.layout.ajuda);
+		
+		Button btsobre = (Button) findViewById(R.id.BTSobre);
+		btsobre.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
-				 Intent i = new Intent(Dingo.this, Inicio.class);
+				Intent i = new Intent(Ajuda.this, Sobre.class);
 		         startActivity(i);
 			}});
-	}
+		
+	Button btFormulas = (Button) findViewById(R.id.BTFormulas);
+	btFormulas.setOnClickListener(new View.OnClickListener() {
+		public void onClick(View arg0) {
 
-}
+		final Dialog dialog2 = new Dialog(Ajuda.this);
+
+		dialog2.setContentView(R.layout.formulasdialog);
+		dialog2.setTitle("Fórmulas");
+		dialog2.setCancelable(true);
+		
+		Button btFechaF = (Button) dialog2.findViewById(R.id.BTFVoltar);
+		btFechaF.setOnClickListener(new OnClickListener() {
+			//@Override
+			public void onClick(View v) {
+            dialog2.dismiss();
+		}});
+		dialog2.show();
+	}});
+		
+	}
+	
+
+	
+	    // TODO Auto-generated method stub
+	}
