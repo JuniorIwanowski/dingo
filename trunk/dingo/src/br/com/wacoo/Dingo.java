@@ -1,7 +1,5 @@
 package br.com.wacoo;
 
-import java.text.DecimalFormat;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

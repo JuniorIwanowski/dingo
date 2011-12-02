@@ -5,7 +5,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="10dp" >
-
+<LinearLayout android:id="@+id/LinearLayout01"
+xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView1">
+<ScrollView android:id="@+id/ScrollView01"
+android:layout_width="fill_parent" android:layout_height="254dp">
+<LinearLayout android:id="@+id/LinearLayout02"
+android:layout_width="wrap_content"
+android:orientation="vertical" android:layout_height="283dp">
     <TextView
         android:id="@+id/dica1"
         android:layout_width="wrap_content"
@@ -98,13 +104,9 @@
         android:layout_below="@+id/textView5"
         android:text="32 x 0,37554 = R$ 12,01"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <Button
-        android:id="@+id/BTFVoltar"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView6"
-        android:layout_centerHorizontal="true"
-        android:text="Ok" />
+        </LinearLayout>
+</ScrollView>
+</LinearLayout>
+<Button android:id="@+id/BTFVoltar" android:layout_height="wrap_content" android:text="Ok" android:layout_width="80dp" android:layout_below="@+id/LinearLayout01" android:layout_centerHorizontal="true"></Button>
 
 </RelativeLayout>
