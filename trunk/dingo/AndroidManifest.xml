@@ -8,22 +8,19 @@
 
     <application android:label="@string/app_name" android:icon="@drawable/dingo">
         <activity android:name=".Dingo"
-                  android:label="@string/app_name"
-                  android:screenOrientation="portrait">
+                  android:screenOrientation="portrait" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity><activity android:name="Inicio"></activity>
+        </activity><activity android:name="Inicio" android:screenOrientation="portrait" android:label="Cômodos"></activity>
         
-        <activity android:name="Sala"></activity>
-        <activity android:name="LampadaSala"></activity>
-        <activity android:name="TVSala"></activity>
-        <activity android:name="DVD"></activity><activity android:name="Som"></activity><activity android:name="Quarto"></activity>
-        <activity android:name="LampadaQuarto"></activity><activity android:name="PC"></activity><activity android:name="Ventilador"></activity><activity android:name="TVQuarto"></activity><activity android:name="Cozinha"></activity>
-        <activity android:name="LampadaCozinha"></activity><activity android:name="Geladeira"></activity><activity android:name="Microondas"></activity><activity android:name="Batedeira"></activity><activity android:name="Banheiro"></activity>
-        
-        
+        <activity android:name="Sala" android:screenOrientation="portrait" android:label="Cômodos - Sala"></activity>
+        <activity android:name="LampadaSala" android:label="Lâmpada" android:screenOrientation="portrait"></activity>
+        <activity android:name="TVSala" android:screenOrientation="portrait" android:label="Cômodos - Sala - Televisão"></activity>
+        <activity android:name="DVD" android:screenOrientation="portrait" android:label="Cômodos - Sala - DVD"></activity><activity android:name="Som" android:screenOrientation="portrait" android:label="Cômodos - Sala - Som"></activity><activity android:name="Quarto" android:screenOrientation="portrait" android:label="Cômodos - Quarto"></activity>
+        <activity android:name="LampadaQuarto" android:screenOrientation="portrait" android:label="Cômodos - Quarto - Lâmpada"></activity><activity android:name="PC" android:screenOrientation="portrait" android:label="Cômodos - Quarto -Computador"></activity><activity android:name="Ventilador" android:screenOrientation="portrait" android:label="Cômodos - Quarto - Ventilador"></activity><activity android:name="TVQuarto" android:screenOrientation="portrait" android:label="Cômodos - Quarto -Televisão"></activity><activity android:name="Cozinha" android:screenOrientation="portrait" android:label="Cômodos - Cozinha"></activity>
+        <activity android:name="LampadaCozinha" android:screenOrientation="portrait" android:label="Cômodos - Cozinha - Lâmpada"></activity><activity android:name="Geladeira" android:screenOrientation="portrait" android:label="Cômodos - Cozinha - Geladeira"></activity><activity android:name="Microondas" android:screenOrientation="portrait" android:label="Cômodos - Cozinha - Microondas"></activity><activity android:name="Batedeira" android:screenOrientation="portrait" android:label="Cômodos - Cozinha - Batedeira"></activity><activity android:name="Banheiro" android:screenOrientation="portrait" android:label="Cômodos - Banheiro"></activity>
         
         
         
@@ -32,14 +29,15 @@
         
         
         
-        <activity android:name="LampadaBanheiro"></activity>
-        <activity android:name="Barbeador"></activity>
-        <activity android:name="Secador"></activity><activity android:name="Chuveiro"></activity><activity android:name="Config"></activity>
         
-        <activity android:name="Ajuda"></activity>
-        <activity android:name="Sobre"></activity>
-        <activity android:name="Calculos"></activity>
-        <activity android:name="MenuDingo"></activity>
+        
+        <activity android:name="LampadaBanheiro" android:label="Cômodos - Banheiro - Lâmpada"></activity>
+        <activity android:name="Barbeador" android:label="Cômodos - Cozinha - Barbeador"></activity>
+        <activity android:name="Secador" android:label="Cômodos - Banheiro - Secador"></activity><activity android:name="Chuveiro" android:label="Cômodos - Banheiro - Chuveiro"></activity><activity android:name="Config" android:label="Configurações"></activity>
+        
+        <activity android:name="Ajuda" android:label="Ajuda"></activity>
+        <activity android:name="Sobre" android:label="Sobre"></activity>
+        <activity android:name="Calculos" android:label="Cálculos"></activity>
         
     </application>
 </manifest>

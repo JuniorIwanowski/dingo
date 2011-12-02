@@ -5,7 +5,7 @@
   android:layout_width="fill_parent"
   android:background="@drawable/dingo_home"
   android:layout_height="fill_parent" android:weightSum="1">
-    <TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="Selecionar Cômodo" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
+    <TextView android:layout_height="wrap_content" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:textColor="#000000" android:text="Selecione o cômodo" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></TextView>
     <Button android:id="@+id/BTChamaSala" android:layout_height="55dp" android:layout_width="211dp" android:text="Sala" android:layout_below="@+id/textView1" android:layout_alignLeft="@+id/textView1" android:layout_marginTop="42dp"></Button>
     <Button android:id="@+id/BTChamaQuarto" android:layout_height="55dp" android:layout_width="211dp" android:text="Quarto" android:layout_below="@+id/BTChamaSala" android:layout_alignLeft="@+id/BTChamaSala"></Button>
     <Button android:id="@+id/BTChamaCozinha" android:layout_height="55dp" android:layout_width="211dp" android:text="Cozinha" android:layout_below="@+id/BTChamaQuarto" android:layout_alignLeft="@+id/BTChamaQuarto"></Button>
