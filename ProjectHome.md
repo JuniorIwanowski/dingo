@@ -1,0 +1,1 @@
+O Dingo é um projeto, criado por estudantes da Escola Técnica Redentorista do curso Técnico de Informática, que tem como objetivo simular os gastos de energia de uma residência e dar dicas conscientes de como evitar estes gastos.
